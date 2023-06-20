@@ -112,7 +112,7 @@ public class Character : MonoBehaviour
     public int numFlare = 0;
     public int numPatch = 0;
     public int health = 100;
-
+    public float oxygen = 100;
 
     public int maxItems = 3;
     // Start is called before the first frame update
@@ -141,7 +141,10 @@ public class Character : MonoBehaviour
             interactionCheck();
         }
 
-
+        if (movementState is SwimState)
+        {
+            oxygen -= Time.deltaTime;
+        }
     }
 
     private void interactionCheck()
