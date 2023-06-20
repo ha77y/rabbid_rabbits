@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{03975E90-66BC-4323-83C1-738154203F84}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{03975E90-66BC-4323-83C1-738154203F84}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{03975E90-66BC-4323-83C1-738154203F84}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="InWater" ID="{4B8AC211-8B09-4963-93B4-1A86A97456AF}">
+					<ChildrenList>
+						<State Name="None" ID="{E39ECB5B-E7F7-42D4-911F-12CB3717DC0B}"/>
+						<State Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+						<State Name="OutOfWater" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

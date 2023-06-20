@@ -31,17 +31,11 @@ public class Character : MonoBehaviour
         
         movement();
 
-        interactionCheck();
 
-
-
-
-
-
-       
-
-
-       
+        if (Input.GetKeyDown("e"))
+        {
+            interactionCheck();
+        }
 
 
     }
@@ -61,5 +55,14 @@ public class Character : MonoBehaviour
     private void interactionCheck()
     {
 
+        float interactDistance = 2f;
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
+        {
+            //if the interact is a cube interact
+            if (raycastHit.transform.parent.TryGetComponent(out InteractableObject objectInteract))
+            {
+                objectInteract.Interact(this);
+            }
+        }
     }
 }

@@ -8,7 +8,82 @@
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{5A177987-9693-4F13-A8DF-962458395809}" WorkUnitID="{31A5D263-F4C7-4F49-809D-E232DD9476A6}"/>
 						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Compressor (Custom)" ID="{B3C6BB89-4B89-4742-9782-6F8305C74A50}" ShortID="186853420" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{379218F1-9984-4CDD-ACA8-37073B201030}" ShortID="143470304">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Threshold"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Depth" ID="{4161B755-E33F-4189-9DE4-BE2598D72D49}" WorkUnitID="{45217E3C-CC52-44AE-A322-F1CBC084C514}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{AF65CFA1-165B-42D0-8A6A-65D14CEEB1A3}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-48.50146</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>InvertedSCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>68.18321</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Effect>
+							</Custom>
+						</Reference>
 					</ReferenceList>
+					<StateInfo>
+						<StatePropertyList>
+							<Property Name="BusVolume"/>
+							<Property Name="BypassEffect0"/>
+							<Property Name="Highpass"/>
+							<Property Name="Lowpass"/>
+							<Property Name="Pitch"/>
+							<Property Name="Volume"/>
+						</StatePropertyList>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="InWater" ID="{4B8AC211-8B09-4963-93B4-1A86A97456AF}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="OutOfWater" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
+								<CustomState Name="" ID="{3306426C-188F-4EDD-8925-1844E921A50F}" ShortID="722319580">
+									<PropertyList>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+								<CustomState Name="" ID="{0911DC51-BDA8-4825-B053-BB07DCDA2F5F}" ShortID="958910021"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

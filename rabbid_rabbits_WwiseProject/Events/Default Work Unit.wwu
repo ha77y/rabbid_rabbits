@@ -8,7 +8,7 @@
 						<Action Name="" ID="{1528B84D-57B1-4323-AF33-E4B21670D1B7}" ShortID="61895752">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="RandomThingie" ID="{5F654201-8243-4AB8-8B86-0DE057F69D46}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+									<ObjectRef Name="RandomThingieMenu" ID="{5F654201-8243-4AB8-8B86-0DE057F69D46}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{D735C154-1DF1-430E-A377-8804F7328A89}" PersistMode="Standalone">
 			<ChildrenList>
-				<RandomSequenceContainer Name="RandomThingie" ID="{5F654201-8243-4AB8-8B86-0DE057F69D46}" ShortID="569208409">
+				<RandomSequenceContainer Name="RandomThingieMenu" ID="{5F654201-8243-4AB8-8B86-0DE057F69D46}" ShortID="569208409">
 					<PropertyList>
 						<Property Name="InitialDelay" Type="Real64">
 							<ModifierList>
@@ -145,6 +145,76 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="Submarine Creaking Sound Effect" ID="{F4E37CD1-D043-40A7-9126-CB2C6C5D39AA}" ShortID="180664387">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Submarine Creaking Sound Effect" ID="{750C1739-578A-4E53-8B2A-F6B141DE5CCF}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.257404630829016"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.577210384283247"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="2.207439712867"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Submarine Creaking Sound Effect.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="378614413"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Submarine Creaking Sound Effect" ID="{750C1739-578A-4E53-8B2A-F6B141DE5CCF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Submarine Creaking Sound Effect_01" ID="{48F19D53-9C96-4686-B8BE-73BAB25459B8}" ShortID="376372601">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Submarine Creaking Sound Effect" ID="{3057B439-4014-40B2-A18F-E00C8420AD37}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.670812068221071"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="4.77368588082901"/>
+								<Property Name="TrimEnd" Type="Real64" Value="8.8219587111399"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Submarine Creaking Sound Effect.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="208349530"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Submarine Creaking Sound Effect" ID="{3057B439-4014-40B2-A18F-E00C8420AD37}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
