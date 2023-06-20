@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{10839C35-66CD-466B-BBB4-55F28E304EC2}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\harri\OneDrive\Desktop\Music stuff\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\harri\Downloads\"/>
 				<Property Name="Event Action List\{099119DB-B20D-4BF1-BA11-5C7BBE35C266}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7AD152C8-83CE-4071-A4DC-0DE958FF5E80}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
@@ -40,6 +40,7 @@
 				<Property Name="ObjectTabPanel\x64_CurrentObjects_{8DBFE310-6786-4964-A553-5D0DEE58DF5B}" Type="string" Value=""/>
 				<Property Name="ObjectTabPanel\x64_CurrentObjects_{C8AF2F53-96D8-4397-BCDA-CC7FC5D81B4F}" Type="string" Value=""/>
 				<Property Name="ObjectTabPanel\x64_CurrentObjects_{D5805147-985E-4C5B-B817-369AF1B7184D}" Type="string" Value="ewBEADcAMwA1AEMAMQA1ADQALQAxAEQARgAxAC0ANAAzADAARQAtAEEAMwA3ADcALQA4ADgAMAA0AEYANwAzADIAOABBADgAOQB9AAAAAQF7ADIARABBAEIARgA0AEEARQAtAEUANwA4AEMALQA0AEQAQwA3AC0AOQA1AEEANwAtADQANQAzAEUARAAzAEMARgBGADcAQQA1AH0AAAABAXsANwBBAEQAMQA1ADIAQwA4AC0AOAAzAEMARQAtADQAMAA3ADEALQBBADQARABDAC0AMABEAEUAOQA1ADgARgBGADUARQA4ADAAfQAAAAEBewBGAEYAOABFADMAOAA2ADMALQBDADUAQwA1AC0ANABCADMAMQAtADgAQQBEAEUALQA5ADMAOQBBADcAQQBGADkAQQBBADkAMgB9AAAAAAF7ADMAOABEADcARQAwAEIARgAtADYAQgBBADUALQA0AEEAOAA2AC0AQQBGADMARAAtADQAOQAzADgAQgAxADEAQwA3ADMAQwBDAH0AAAABAQ=="/>
+				<Property Name="PluginUserAcknowledge\SoundSeedAir" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\AudioSelectionChannel1\ProjectExplorer2LastScrollState" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer\AudioSelectionChannel1\x64_ProjectExplorer2LastExpandedState" Type="string" Value="iC8JJ1oiVBFnJcijTz1EguraiCN1l8ZGou3FIio5d1b4u6dewGRQSoghoH6L4h1oZtP+STC1qEKZO5JIc6q3BzY+e2Q68K5CgbHT0Ll42nFjOI7/xcUxS4rek5p6+aqS"/>
 				<Property Name="ProjectExplorer\AudioSelectionChannel2\ProjectExplorer2LastScrollState" Type="int32" Value="0"/>
