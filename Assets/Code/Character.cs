@@ -158,10 +158,10 @@ public class Character : MonoBehaviour
     IEnumerator MoveToDoor(float duration, Character player, Door door, bool enter)
     {
         float time = 0;
-        float entDist = 3;
+        float entDist = 3f;
         if (!enter)
         {
-            entDist *= -1;
+            entDist = -1.5f;
         }
 
         Vector3 targetPosition = door.transform.position + door.transform.forward * entDist;
@@ -182,19 +182,21 @@ public class Character : MonoBehaviour
 
     public void doorEnter(Character player, Door door, bool enter)
     {
-        float animDur = 1.5f;
-        StartCoroutine(Enter(animDur, player, door, enter));
+
+        StartCoroutine(Enter(player, door, enter));
     }
 
-    public IEnumerator Enter(float duration, Character player, Door door, bool enter)
+    public IEnumerator Enter(Character player, Door door, bool enter)
     {
-
+        float duration = 1.5f;
         Debug.Log("Entering");
         float time = 0;
-        float entDist = -3;
+        float entDist = -1.5f;
+
+        bool closed = false;
         if (!enter)
         {
-            entDist *= -1;
+            entDist = 4.5f;
         }
 
         Vector3 targetPosition = door.transform.position + door.transform.forward * entDist;
@@ -206,9 +208,10 @@ public class Character : MonoBehaviour
             time += Time.deltaTime;
             //player.transform.LookAt(door.transform);
 
-            if (time >= 0.75)
+            if (time >= 0.75 && closed == false)
             {
                 door.close();
+                closed = true;
             }
             yield return null;
         }
