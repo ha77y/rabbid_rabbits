@@ -19,14 +19,15 @@ public class SwimState : MovementState
     public override void movement(Character player)
     {
 
+
         //Rotation
         player.transform.rotation = Quaternion.Euler(player.transform.rotation.eulerAngles.x + Input.GetAxis("Mouse Y") * -1 * player.cameraSens, player.transform.rotation.eulerAngles.y + Input.GetAxis("Mouse X") * player.cameraSens, player.transform.rotation.eulerAngles.z);
         //Movement
         player.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Input.GetAxisRaw("Vertical") * player.moveSpeed);
         player.GetComponent<Rigidbody>().AddRelativeForce(Vector3.right * Input.GetAxisRaw("Horizontal") * player.moveSpeed);
 
-
     }
+
     public override void switchMovement(Character player)
     {
 
@@ -38,6 +39,10 @@ public class SwimState : MovementState
 
     public override void initialize(Character player)
     {
+        player.moveSpeed = 2f;
+        player.GetComponent<Rigidbody>().drag = 3;
+        player.GetComponent<Rigidbody>().useGravity = false ;
+        player.GetComponent<CapsuleCollider>().enabled = false;
         //change character model orientation
     }
 }
@@ -48,21 +53,44 @@ public class WalkState : MovementState
     public override void movement(Character player)
     {
 
-          //Rotation
-          player.transform.rotation = Quaternion.Euler(player.transform.rotation.eulerAngles.x + Input.GetAxis("Mouse Y") * -1 * player.cameraSens, player.transform.rotation.eulerAngles.y + Input.GetAxis("Mouse X") * player.cameraSens, player.transform.rotation.eulerAngles.z);
-          //Movement
-          player.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Input.GetAxisRaw("Vertical") * player.moveSpeed);
-          player.GetComponent<Rigidbody>().AddRelativeForce(Vector3.right * Input.GetAxisRaw("Horizontal") * player.moveSpeed);
+        //Rotation
+        player.transform.rotation = Quaternion.Euler(0, player.transform.rotation.eulerAngles.y + Input.GetAxis("Mouse X") * player.cameraSens, 0);
+        player.GetComponentInChildren<Camera>().transform.localRotation = Quaternion.Euler(player.GetComponentInChildren<Camera>().transform.localRotation.eulerAngles.x + Input.GetAxis("Mouse Y") * -1 * player.cameraSens, 0, 0);
+
+        //Movement
+        player.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Input.GetAxisRaw("Vertical") * player.moveSpeed);
+        player.GetComponent<Rigidbody>().AddRelativeForce(Vector3.right * Input.GetAxisRaw("Horizontal") * player.moveSpeed);
 
     }
 
     public override void switchMovement(Character player)
     {
 
-            player.movementState = new SwimState();
-            player.movementState.initialize(player);
-            Debug.Log("SwimState");
+         player.movementState = new SwimState();
+         player.movementState.initialize(player);
+         Debug.Log("SwimState");
 
+    }
+
+    public override void initialize(Character player)
+    {
+        player.moveSpeed = 4f;
+        player.GetComponent<Rigidbody>().drag = 5;
+        player.GetComponent<Rigidbody>().useGravity = true;
+        player.GetComponent<CapsuleCollider>().enabled = true;
+    }
+}
+
+public class AnimState : MovementState
+{
+
+    public override void movement(Character player)
+    {
+
+    }
+
+    public override void switchMovement(Character player)
+    {
 
     }
 
@@ -72,25 +100,26 @@ public class WalkState : MovementState
     }
 }
 
-
-
 public class Character : MonoBehaviour
 {
 
 
     public MovementState movementState;
 
-    public float moveSpeed = 1f;
+    public float moveSpeed = 2f;
 
-    public float cameraSens = 1f;
-
+    public float cameraSens = 2f;
 
     public Vector3 test;
+
+
+    public CapsuleCollider walkCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         movementState = new SwimState();
+        movementState.initialize(this);
     }
 
     // Update is called once per frame
@@ -116,18 +145,91 @@ public class Character : MonoBehaviour
     }
 
 
-
-    private void movement()
+    public void doorMove(Door door)
     {
-        ////Rotation
-        //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x + Input.GetAxis("Mouse Y") * -1 * cameraSens, transform.rotation.eulerAngles.y + Input.GetAxis("Mouse X") * cameraSens, transform.rotation.eulerAngles.z);
-        ////Movement
-        //GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Input.GetAxisRaw("Vertical") * moveSpeed);
-        //GetComponent<Rigidbody>().AddRelativeForce(Vector3.right * Input.GetAxisRaw("Horizontal") * moveSpeed);
+        bool enter = false;
+        if (movementState is SwimState) {   enter = true;   }
+        movementState = new AnimState();
+        float animDur = 1f;
+        StartCoroutine(MoveToDoor(animDur, this, door, enter));
     }
 
 
-    private void interactionCheck()
+    IEnumerator MoveToDoor(float duration, Character player, Door door, bool enter)
+    {
+        float time = 0;
+        float entDist = 3;
+        if (!enter)
+        {
+            entDist *= -1;
+        }
+
+        Vector3 targetPosition = door.transform.position + door.transform.forward * entDist;
+
+        Vector3 startPosition = player.transform.position;
+        while (time < duration)
+        {
+            player.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
+            time += Time.deltaTime;
+            player.transform.LookAt(door.transform);
+            yield return null;
+        }
+        player.transform.position = targetPosition;
+
+        door.open(player, enter);
+    }
+
+
+    public void doorEnter(Character player, Door door, bool enter)
+    {
+        float animDur = 1.5f;
+        StartCoroutine(Enter(animDur, player, door, enter));
+    }
+
+    public IEnumerator Enter(float duration, Character player, Door door, bool enter)
+    {
+
+        Debug.Log("Entering");
+        float time = 0;
+        float entDist = -3;
+        if (!enter)
+        {
+            entDist *= -1;
+        }
+
+        Vector3 targetPosition = door.transform.position + door.transform.forward * entDist;
+
+        Vector3 startPosition = player.transform.position;
+        while (time < duration)
+        {
+            player.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
+            time += Time.deltaTime;
+            //player.transform.LookAt(door.transform);
+
+            if (time >= 0.75)
+            {
+                door.close();
+            }
+            yield return null;
+        }
+        player.transform.position = targetPosition;
+
+
+
+        // should prolly put this in the animstate for consistency
+        if (enter)
+        {
+            player.movementState = new WalkState();
+        }
+        else
+        {
+            player.movementState = new SwimState();
+        }
+
+
+    }
+
+        private void interactionCheck()
     {
 
         float interactDistance = 2f;
