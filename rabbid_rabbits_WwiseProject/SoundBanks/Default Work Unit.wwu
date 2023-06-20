@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{400E2FA1-B821-4325-A1F0-40415472526F}" SchemaVersion="110">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{400E2FA1-B821-4325-A1F0-40415472526F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{400E2FA1-B821-4325-A1F0-40415472526F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{9E248060-09EA-4CE9-A1FF-FCB29CE4DF15}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_MainMenu" ID="{7AD152C8-83CE-4071-A4DC-0DE958FF5E80}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PlayRandomThingie" ID="{099119DB-B20D-4BF1-BA11-5C7BBE35C266}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_MainMenu" ID="{9A4EF745-9532-4E89-9A03-7BD3E7282938}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

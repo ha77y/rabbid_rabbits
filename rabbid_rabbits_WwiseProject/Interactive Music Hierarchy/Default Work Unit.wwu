@@ -3,20 +3,7 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{647B3E36-F03A-42AE-81B1-D3D0B978DA71}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSegment Name="LWD Menu theme" ID="{ECE3B8BF-F871-4D5C-B971-0AEDF6F498F6}" ShortID="738882879">
-					<PropertyList>
-						<Property Name="EndPosition" Type="Real64" Value="16000"/>
-						<Property Name="OutputBusVolume" Type="Real64">
-							<ValueList>
-								<Value>6</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>12</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
+				<MusicPlaylistContainer Name="MainMenu" ID="{FF8E3863-C5C5-4B31-8ADE-939A7AF9AA92}" ShortID="196116370">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
@@ -26,77 +13,118 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicTrack Name="LWD Menu theme" ID="{CE65E7F8-1C37-46EB-9F5D-DEA6D4B32351}" ShortID="920522979">
+						<MusicSegment Name="LWD Menu theme" ID="{D9275D17-AD01-4F45-BD40-4635E04BA7E7}" ShortID="640295634">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="16000"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="LWD Menu theme" ID="{3B46B5A0-3898-44CF-818B-CAE8E0D56682}">
-									<Language>SFX</Language>
-									<AudioFile>LWD Menu theme.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="728202173"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<MusicTrack Name="LWD Menu theme" ID="{F2E021E5-CC19-455E-9CD5-C4EB11268EF8}" ShortID="178016329">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="LWD Menu theme" ID="{3376224A-9E02-43A2-B482-3924E213CBCE}">
+											<Language>SFX</Language>
+											<AudioFile>LWD Menu theme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="728202173"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{C0132C58-869D-47D4-B42B-E09493489337}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E145CC70-FB5C-4FC1-A152-ACBECFECE313}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="LWD Menu theme" ID="{FDE59220-C3F6-494B-B2F2-AB519B93ECA1}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="LWD Menu theme" ID="{3376224A-9E02-43A2-B482-3924E213CBCE}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
 							</ChildrenList>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{8BFDEBA6-47E6-402C-A6E2-D8115EFF50C8}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
 							<ObjectLists>
-								<ObjectList Name="Sequences">
+								<ObjectList Name="Cues">
 									<Reference>
 										<Local>
-											<MusicTrackSequence Name="" ID="{3967BEB6-8A83-4E8C-940C-031E3B367F51}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<Reference>
-															<Local>
-																<MusicClip Name="LWD Menu theme" ID="{CDB737CF-F35D-4405-80FC-206DB9169993}">
-																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
-																		<Property Name="FadeInMode" Type="int16" Value="0"/>
-																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																	</PropertyList>
-																	<AudioSourceRef Name="LWD Menu theme" ID="{3B46B5A0-3898-44CF-818B-CAE8E0D56682}"/>
-																</MusicClip>
-															</Local>
-														</Reference>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
+											<MusicCue Name="Entry Cue" ID="{03296EA3-DACF-453D-AC57-0C0B2A89BE99}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{783BDF5E-3449-40E6-8C07-437556226A83}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="16000"/>
+												</PropertyList>
+											</MusicCue>
 										</Local>
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
-						</MusicTrack>
+						</MusicSegment>
 					</ChildrenList>
-					<ObjectLists>
-						<ObjectList Name="Cues">
-							<Reference>
-								<Local>
-									<MusicCue Name="Entry Cue" ID="{DCC70687-7A8A-41CB-8E13-4160B83C256E}"/>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<MusicCue Name="Exit Cue" ID="{42F718BA-80A5-4332-AB4F-7B937811DF68}">
-										<PropertyList>
-											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="16000"/>
-										</PropertyList>
-									</MusicCue>
-								</Local>
-							</Reference>
-						</ObjectList>
-					</ObjectLists>
-				</MusicSegment>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{935C013B-DE3D-4FE9-A1BE-CDEEED1CA1A0}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{B47BBB3B-5BF3-4978-9962-DB87726A8059}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{E8124569-0ED8-4F33-8F8F-D2A96873AD65}" ShortID="295873699">
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{FC9EEEA0-B97B-4CA3-B41D-13173D0F94A2}" ShortID="569540212">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="LWD Menu theme" ID="{D9275D17-AD01-4F45-BD40-4635E04BA7E7}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

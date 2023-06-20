@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlayRandomThingie" ID="{099119DB-B20D-4BF1-BA11-5C7BBE35C266}">
+					<ChildrenList>
+						<Action Name="" ID="{1528B84D-57B1-4323-AF33-E4B21670D1B7}" ShortID="61895752">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RandomThingie" ID="{5F654201-8243-4AB8-8B86-0DE057F69D46}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MainMenu" ID="{7AD152C8-83CE-4071-A4DC-0DE958FF5E80}">
+					<ChildrenList>
+						<Action Name="" ID="{4B2463C3-127A-4D7F-9C0B-C9A7596DD62B}" ShortID="185950998">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMenu" ID="{FF8E3863-C5C5-4B31-8ADE-939A7AF9AA92}" WorkUnitID="{647B3E36-F03A-42AE-81B1-D3D0B978DA71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_MainMenu" ID="{9A4EF745-9532-4E89-9A03-7BD3E7282938}">
+					<ChildrenList>
+						<Action Name="" ID="{67E69AC7-E588-4699-9262-48245ADD58DD}" ShortID="106849933">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMenu" ID="{FF8E3863-C5C5-4B31-8ADE-939A7AF9AA92}" WorkUnitID="{647B3E36-F03A-42AE-81B1-D3D0B978DA71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

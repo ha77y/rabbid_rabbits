@@ -1,6 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D735C154-1DF1-430E-A377-8804F7328A89}" SchemaVersion="110">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{D735C154-1DF1-430E-A377-8804F7328A89}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D735C154-1DF1-430E-A377-8804F7328A89}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="RandomThingie" ID="{5F654201-8243-4AB8-8B86-0DE057F69D46}" ShortID="569208409">
+					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{029EF47E-0244-4010-85BF-906CE8D8341C}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="4"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="moving-low-frequencies-30842" ID="{26B8B309-AC1C-458C-B915-DB0D52C01DFA}" ShortID="723204628">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="moving-low-frequencies-30842" ID="{43421EB7-661A-4F6D-8EB7-A5DA2A65B2C1}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.52345797598628"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.95696740994854"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.23173522693947"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>moving-low-frequencies-30842.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="296726061"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="moving-low-frequencies-30842" ID="{43421EB7-661A-4F6D-8EB7-A5DA2A65B2C1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="underwater-ambience-6201" ID="{38D7E0BF-6BA5-4A86-AF3D-4938B11C73CC}" ShortID="125180344">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="underwater-ambience-6201" ID="{FFDF48A0-668F-4E80-B41E-C570D1D4042F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.885283018867925"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.724322469982847"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.68663727903731"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>underwater-ambience-6201.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="328404054"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="underwater-ambience-6201" ID="{FFDF48A0-668F-4E80-B41E-C570D1D4042F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="underwater-ambience-6201_01" ID="{3FF433B9-B63F-4622-8D85-0A8358E288AB}" ShortID="140226479">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="underwater-ambience-6201" ID="{99EF2D80-D67F-48D4-9331-2D1ACF0ED620}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.885283018867925"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.08898568241808"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.34839378238342"/>
+										<Property Name="TrimEnd" Type="Real64" Value="8.64280308214612"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>underwater-ambience-6201.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="837911073"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="underwater-ambience-6201" ID="{99EF2D80-D67F-48D4-9331-2D1ACF0ED620}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="underwater-ambience-6201_02" ID="{2DABF4AE-E78C-4DC7-95A7-453ED3CFF7A5}" ShortID="1026979389">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="underwater-ambience-6201" ID="{13ED1C12-E199-46C8-BC82-E4309665CABA}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.885283018867925"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.08898568241808"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="17.8684974093264"/>
+										<Property Name="TrimEnd" Type="Real64" Value="20.5551346883637"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>underwater-ambience-6201.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="126442879"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="underwater-ambience-6201" ID="{13ED1C12-E199-46C8-BC82-E4309665CABA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
