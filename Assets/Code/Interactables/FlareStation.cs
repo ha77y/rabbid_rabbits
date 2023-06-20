@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class FlareStation : InteractableObject
 {
+    bool used = false;
+
     public override void Interact(Character player)
     {
-        Debug.Log("FlareInteract");
+        if (used)
+        {
+            Debug.Log("Empty");
+        }
+        else if (player.numFlare >= player.maxItems)
+        {
+            Debug.Log("Full");
+        }
+        else
+        {
+            player.numFlare++;
+            used = true;
+        }
     }
+
 }

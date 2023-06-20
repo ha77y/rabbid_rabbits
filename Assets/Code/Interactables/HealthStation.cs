@@ -6,7 +6,10 @@ public class HealthStation : InteractableObject
 {
     public override void Interact(Character player)
     {
-        Debug.Log("HealthInteract");
+        if (player.health < 100)
+        {
+            player.health = 100;
+        }
     }
 }
 

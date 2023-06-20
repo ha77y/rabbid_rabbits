@@ -105,16 +105,16 @@ public class Character : MonoBehaviour
 
 
     public MovementState movementState;
-
     public float moveSpeed = 2f;
-
     public float cameraSens = 2f;
-
-    public Vector3 test;
-
-
     public CapsuleCollider walkCollider;
 
+    public int numFlare = 0;
+    public int numPatch = 0;
+    public int health = 100;
+
+
+    public int maxItems = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -144,6 +144,21 @@ public class Character : MonoBehaviour
 
     }
 
+    private void interactionCheck()
+    {
+
+        float interactDistance = 2f;
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
+        {
+            //if the interact is a cube interact
+            if (raycastHit.transform.parent.TryGetComponent(out InteractableObject objectInteract))
+            {
+                objectInteract.Interact(this);
+            }
+        }
+    }
+
+
 
     public void doorMove(Door door)
     {
@@ -153,7 +168,6 @@ public class Character : MonoBehaviour
         float animDur = 1f;
         StartCoroutine(MoveToDoor(animDur, this, door, enter));
     }
-
 
     IEnumerator MoveToDoor(float duration, Character player, Door door, bool enter)
     {
@@ -179,14 +193,13 @@ public class Character : MonoBehaviour
         door.open(player, enter);
     }
 
-
     public void doorEnter(Character player, Door door, bool enter)
     {
 
         StartCoroutine(Enter(player, door, enter));
     }
 
-    public IEnumerator Enter(Character player, Door door, bool enter)
+    IEnumerator Enter(Character player, Door door, bool enter)
     {
         float duration = 1.5f;
         Debug.Log("Entering");
@@ -196,6 +209,7 @@ public class Character : MonoBehaviour
         bool closed = false;
         if (!enter)
         {
+            ///EXIT DISTANCE
             entDist = 4.5f;
         }
 
@@ -232,17 +246,5 @@ public class Character : MonoBehaviour
 
     }
 
-        private void interactionCheck()
-    {
 
-        float interactDistance = 2f;
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
-        {
-            //if the interact is a cube interact
-            if (raycastHit.transform.parent.TryGetComponent(out InteractableObject objectInteract))
-            {
-                objectInteract.Interact(this);
-            }
-        }
-    }
 }
