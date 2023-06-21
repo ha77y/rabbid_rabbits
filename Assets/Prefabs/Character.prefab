@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8088046402447179368}
   - component: {fileID: 8088046402447179369}
   - component: {fileID: 2173580874586699877}
+  - component: {fileID: 3996572884694005381}
   - component: {fileID: 8088046402447179375}
   - component: {fileID: 8088046402447179374}
   m_Layer: 0
@@ -50,7 +51,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   cameraSens: 1.5
-  test: {x: 0, y: 0, z: 0}
+  walkCollider: {fileID: 0}
+  numFlare: 0
+  numPatch: 0
+  health: 100
+  oxygen: 100
+  maxItems: 3
 --- !u!114 &2173580874586699877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +69,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d211ba9d9332874db5c399ee222455c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3996572884694005381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088046402447179370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c499ae5864d3a498f7bee5781a26a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  RB: {fileID: 8088046402447179375}
+  Thrust: 20
+  Flare: {fileID: 3674973213533175035, guid: 2a626f968669d404fbd021f69e010843, type: 3}
 --- !u!54 &8088046402447179375
 Rigidbody:
   m_ObjectHideFlags: 0
