@@ -4,9 +4,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	4025941372	PlayRandomThingie			\Default Work Unit\PlayRandomThingie	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	126442879	underwater-ambience-6201_02	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_BA0AAB0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingie\underwater-ambience-6201_02		258012
-	296726061	moving-low-frequencies-30842	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\moving-low-frequencies-30842_F893898D.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingie\moving-low-frequencies-30842		406344
-	328404054	underwater-ambience-6201	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_B2CA6107.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingie\underwater-ambience-6201		258012
+	126442879	underwater-ambience-6201_02	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_E42ACF45.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingieMenu\underwater-ambience-6201_02		258012
+	296726061	moving-low-frequencies-30842	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\moving-low-frequencies-30842_86020D22.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingieMenu\moving-low-frequencies-30842		406344
+	328404054	underwater-ambience-6201	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_F51946C9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingieMenu\underwater-ambience-6201		258012
 	728202173	LWD Menu theme	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\LWD Menu theme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MainMenu\LWD Menu theme\LWD Menu theme		2822496
-	837911073	underwater-ambience-6201_01	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_5FF1CECB.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingie\underwater-ambience-6201_01		316360
+	837911073	underwater-ambience-6201_01	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_7C29CD87.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingieMenu\underwater-ambience-6201_01		316360
 

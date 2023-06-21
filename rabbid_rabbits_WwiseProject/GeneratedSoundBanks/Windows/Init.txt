@@ -1,6 +1,18 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	440928865	InWater			\Default Work Unit\InWater	
+
+State	ID	Name	State Group			Notes
+	440928865	InWater	InWater			
+	748895195	None	InWater			
+	1182647281	OutOfWater	InWater			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	722319580	OutOfWater	InWater	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
+	681025064	Depth			\Default Work Unit\Depth	
 	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
 	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
 	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
@@ -16,6 +28,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	186853420	Compressor (Custom)	Wwise Compressor			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

@@ -805,39 +805,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6c3103f5b20e47449b8b697b37fa249, type: 3}
---- !u!4 &543450653404963513
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149483337731}
-  m_LocalRotation: {x: -0.6498988, y: -0.27862433, z: 0.27862436, w: 0.6498988}
-  m_LocalPosition: {x: 1.1161394, y: 0.65565735, z: 6.2567935}
-  m_LocalScale: {x: 3.0897243, y: 3.0897243, z: 0.82247126}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &919132149483337731
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 543450653404963513}
-  - component: {fileID: 3469287837254757660}
-  - component: {fileID: 1711813855341435350}
-  m_Layer: 0
-  m_Name: Tank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &1366422740708232599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -895,61 +862,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a1d389b4f662e345a11b653c674d988, type: 3}
---- !u!23 &1711813855341435350
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149483337731}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 54ac52bb2fface9478ece15bc70922cf, type: 2}
-  - {fileID: 2100000, guid: 5d77ab3976103114baa0471b403d905b, type: 2}
-  - {fileID: 2100000, guid: 7d62254f5425ca94ab6bc68c10fde4a3, type: 2}
-  - {fileID: 2100000, guid: c6fff406ea7c31c41879924013206be5, type: 2}
-  - {fileID: 2100000, guid: 7980e7c2c6124bc4c9398224347bdcac, type: 2}
-  - {fileID: 2100000, guid: 155bb9827007a024f901fc926c7f2e51, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &3469287837254757660
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149483337731}
-  m_Mesh: {fileID: 1652517234384332068, guid: e29794c1ed826ec469df8a5b2211c857, type: 3}
 --- !u!1001 &5231395779439626935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1023,3 +935,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 957f86ddc454cc9438c55013dd99ebdd, type: 3}
+--- !u!1001 &9082623331141648060
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8271595317053818559, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_Name
+      value: Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1161394
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65565735
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.2567935
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6498988
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6498988
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.27862433
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.27862436
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755363474423897093, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 75aa0dc774d0dea4390dbdf87613e2ac, type: 3}
