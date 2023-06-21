@@ -39,6 +39,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_RandomInside" ID="{C833ECC3-6DCB-451E-975F-82805F92D678}">
+					<ChildrenList>
+						<Action Name="" ID="{E6D55BD8-EB42-44D4-94BD-6A0D5C23019A}" ShortID="390324329">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RandomInside" ID="{24AEF142-5867-4EDC-ADDF-C5F562A100A3}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RandomOutside" ID="{82622D7D-39E1-4B4A-A43F-E7C2BD1CFC09}">
+					<ChildrenList>
+						<Action Name="" ID="{315A6896-A3E2-4D23-AE90-5FFD71F199D9}" ShortID="947758525">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RandomOutside" ID="{86BFB21C-B97D-4C41-84E9-10A30A2FB220}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

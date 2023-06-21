@@ -167,13 +167,17 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7B55F746-74D8-C713-1BAB-FB0C1D818861}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{43637E53-AF92-EB9E-93DB-EE7FBAA11D6E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="126442879" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>underwater-ambience-6201.wav</ShortName>
 					<CachePath>SFX/underwater-ambience-6201_E42ACF45.wem</CachePath>
+				</File>
+				<File Id="208349530" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Submarine Creaking Sound Effect.wav</ShortName>
+					<CachePath>SFX/Submarine Creaking Sound Effect_F3593E45.wem</CachePath>
 				</File>
 				<File Id="296726061" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>moving-low-frequencies-30842.wav</ShortName>
@@ -182,6 +186,14 @@
 				<File Id="328404054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>underwater-ambience-6201.wav</ShortName>
 					<CachePath>SFX/underwater-ambience-6201_F51946C9.wem</CachePath>
+				</File>
+				<File Id="378614413" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Submarine Creaking Sound Effect.wav</ShortName>
+					<CachePath>SFX/Submarine Creaking Sound Effect_BC5B6844.wem</CachePath>
+				</File>
+				<File Id="594164152" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LWD Waaap.wav</ShortName>
+					<CachePath>SFX/LWD Waaap_10C4C929.wem</CachePath>
 				</File>
 				<File Id="728202173" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LWD Menu theme.wav</ShortName>
@@ -198,6 +210,17 @@
 						<MediaRef Id="728202173"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4209940251" Name="Play_RandomInside" DurationType="OneShot" DurationMin="2.2074397" DurationMax="3.447662">
+					<MediaRefs>
+						<MediaRef Id="208349530"/>
+						<MediaRef Id="378614413"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="896793584" Name="Play_RandomOutside" DurationType="OneShot" DurationMin="5.663245" DurationMax="6.356779">
+					<MediaRefs>
+						<MediaRef Id="594164152"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4025941372" Name="PlayRandomThingie" DurationType="OneShot" DurationMin="2.6866372" DurationMax="8.231735">
 					<MediaRefs>
 						<MediaRef Id="126442879"/>
@@ -210,5 +233,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3A5AAF40-213D-C65E-3F84-7CF8FF381328}</FileHash>
+	<FileHash>{9F1CD31D-4892-8067-8031-B277CF2CFEE0}</FileHash>
 </SoundBanksInfo>
