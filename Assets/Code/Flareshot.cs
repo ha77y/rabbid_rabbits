@@ -17,11 +17,12 @@ public class Flareshot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(""))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if(player.numFlare <= 1)
             {
                 Instantiate(Flare);
+                rb = Flare.GetComponent<Rigidbody>();
                 rb.AddForce(player.transform.forward * Thrust);
             }
         }
