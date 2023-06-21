@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 
@@ -115,6 +116,9 @@ public class Character : MonoBehaviour
     public float oxygen = 100;
 
     public int maxItems = 3;
+
+
+    public Vector2 lookDirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -145,6 +149,8 @@ public class Character : MonoBehaviour
         {
             oxygen -= Time.deltaTime;
         }
+
+        setLookDir();
     }
 
     private void interactionCheck()
@@ -161,7 +167,26 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void setLookDir()
+    {
+        if(movementState is SwimState)
+        {
+            lookDirection.y = transform.eulerAngles.x + 270;
 
+        }
+        else
+        {
+            lookDirection.y = transform.GetComponentInChildren<Camera>().transform.eulerAngles.x + 270;
+        }
+        lookDirection.x = transform.eulerAngles.y;
+            if(lookDirection.y >= 360)
+            {
+                lookDirection.y -= 360;
+            }
+            lookDirection.y -= 180;
+            lookDirection.y = 180 - lookDirection.y;
+            Debug.Log(lookDirection);
+    }
 
     public void doorMove(Door door)
     {
