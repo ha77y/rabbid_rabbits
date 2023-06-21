@@ -9,6 +9,7 @@ public class Flareshot : MonoBehaviour
     public GameObject Flare;
     private GameObject currentflare;
     Rigidbody rb;
+    Quaternion rotation;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,8 @@ public class Flareshot : MonoBehaviour
         {
             if(player.numFlare >= 1)
             {
-                currentflare = Instantiate(Flare);
+                rotation.eulerAngles = new Vector3(player.lookDirection.y, player.lookDirection.x, player.lookDirection.z);
+                currentflare = Instantiate(Flare,player.transform.position+player.transform.forward * 1,rotation);
                 rb = currentflare.GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * Thrust,ForceMode.Impulse);
             }
