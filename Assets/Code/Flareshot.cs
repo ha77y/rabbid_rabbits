@@ -5,9 +5,11 @@ using UnityEngine;
 public class Flareshot : MonoBehaviour
 {
     public Character player;
-    public float Thrust = 20f;
+    public float Thrust = 20000f;
     public GameObject Flare;
+    private GameObject currentflare;
     Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,11 @@ public class Flareshot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if(player.numFlare <= 1)
+            if(player.numFlare >= 1)
             {
-                Instantiate(Flare);
-                rb = Flare.GetComponent<Rigidbody>();
-                rb.AddForce(player.transform.forward * Thrust);
+                currentflare = Instantiate(Flare);
+                rb = currentflare.GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * Thrust,ForceMode.Impulse);
             }
         }
     }
