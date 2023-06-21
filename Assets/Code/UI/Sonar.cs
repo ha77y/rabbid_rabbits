@@ -16,7 +16,7 @@ public class Sonar : MonoBehaviour
     public Image sonarDirection;
     // Start is called before the first frame update
 
-    public float sonarRadius = 50f;
+    public float sonarRadius = 100f;
 
     public RaycastHit[] Hits;
     public Vector3 boxSize;
@@ -25,9 +25,10 @@ public class Sonar : MonoBehaviour
     public Quaternion orientation;
     public Vector3 direction;
 
+    public float angle = 0;
     void Start()
     {
-        boxSize = new Vector3(1, 400, 0.1f);
+        boxSize = new Vector3(0.1f, 400, 0.1f) ;
     }
 
 
@@ -38,17 +39,32 @@ public class Sonar : MonoBehaviour
         sonarDirection.transform.rotation = Quaternion.Euler(0, 0, -rotation);
         sonarSweep.transform.Rotate(0, 0, 1);
 
-        orientation.eulerAngles = new Vector3(player.lookDirection.x, 0, 0);
-        //Debug.Log(player.lookDirection.x);
 
-        //direction = new Vector3(0, 0, player.lookDirection.x);
+        //direction = player.transform.forward;
+        //direction.y = 0;
+        if (angle >= 360)
+        {
+            angle = 0;
+
+        }
+        else
+        {
+            angle++;
+        }
+
+        direction = new Vector3(angle,0,0);
+
+        Hits = Physics.BoxCastAll(player.transform.position, boxSize, new Vector3(0, angle, 0), orientation, sonarRadius);
 
 
-        Hits = Physics.BoxCastAll(player.transform.position, boxSize, direction, orientation, sonarRadius);
+
         for (int i = 0; i < Hits.Length; i++)
         {
-            RaycastHit hit = Hits[i];
-            Debug.Log(Hits[i].transform);
+            if (Hits[i].transform.tag == "Sonar")
+            {
+                Debug.Log(Hits[i].transform);
+            }
+
         }
     }
 }
