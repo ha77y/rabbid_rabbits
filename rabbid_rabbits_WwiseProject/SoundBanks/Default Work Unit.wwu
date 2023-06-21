@@ -10,6 +10,8 @@
 						<ObjectRef Name="Play_RandomOutside" ID="{82622D7D-39E1-4B4A-A43F-E7C2BD1CFC09}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayRandomThingie" ID="{099119DB-B20D-4BF1-BA11-5C7BBE35C266}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_MainMenu" ID="{9A4EF745-9532-4E89-9A03-7BD3E7282938}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_FlareIgnite" ID="{B1A9838C-53FE-4E91-86AD-D1A7B0C281F0}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FlareIgnite" ID="{D3701393-5EF4-4FBF-BA7E-B9FCC5433AB3}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

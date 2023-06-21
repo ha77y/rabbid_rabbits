@@ -300,6 +300,166 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<ActorMixer Name="Flare" ID="{9C924D9B-ACA9-4A2F-8B32-92CDB31A5FB7}" ShortID="751767325">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>39</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Flare" ID="{0F2F6EBF-4A0D-4F9C-8767-3D76609B58FD}" WorkUnitID="{D2A5BB43-A390-4DC0-AF8B-A488647E1DF9}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="FlareIgnite" ID="{A90E4793-8360-45EA-8E5C-C3AB602C4388}" ShortID="1011518342">
+							<PropertyList>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="designed-fire-winds-swoosh-04-116788" ID="{B5F54A66-0514-433A-A8C0-A20120EC7455}" ShortID="252285007">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="designed-fire-winds-swoosh-04-116788" ID="{5BF9AA0E-CF4E-42C8-8878-9F845B07708D}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.0321243523316"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>designed-fire-winds-swoosh-04-116788.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="978712793"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="designed-fire-winds-swoosh-04-116788" ID="{5BF9AA0E-CF4E-42C8-8878-9F845B07708D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="afterburn" ID="{1DD2763F-AC81-4960-8161-50F9D8B59D5A}" ShortID="893860530">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="designed-fire-winds-swoosh-04-116788_02" ID="{56573A05-D006-4DB0-A6C6-D737362A294E}" ShortID="693170344">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="designed-fire-winds-swoosh-04-116788" ID="{E1248BD2-B407-4965-B7CF-987160CF5285}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0360621761658031"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0270466321243523"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.91492227979275"/>
+														<Property Name="TrimEnd" Type="Real64" Value="8.64590673575129"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>designed-fire-winds-swoosh-04-116788.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="354413542"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="designed-fire-winds-swoosh-04-116788" ID="{E1248BD2-B407-4965-B7CF-987160CF5285}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="designed-fire-winds-swoosh-04-116788_01" ID="{52F8D507-CD6D-4EDE-B8E6-278C9951BCA6}" ShortID="165616672">
+											<PropertyList>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="designed-fire-winds-swoosh-04-116788" ID="{69F0A2C2-5338-459B-9A10-4C26CB494ECB}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0450777202072539"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0631088082901545"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.47388601036269"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.01554404145076"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>designed-fire-winds-swoosh-04-116788.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="298035340"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{62161F82-6106-45FE-B715-CC15A62F1E5A}"/>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="designed-fire-winds-swoosh-04-116788" ID="{69F0A2C2-5338-459B-9A10-4C26CB494ECB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="designed-fire-winds-swoosh-04-116788" ID="{B5F54A66-0514-433A-A8C0-A20120EC7455}"/>
+								<ItemRef Name="afterburn" ID="{1DD2763F-AC81-4960-8161-50F9D8B59D5A}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

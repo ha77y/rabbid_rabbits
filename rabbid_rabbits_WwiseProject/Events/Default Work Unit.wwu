@@ -61,6 +61,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_FlareIgnite" ID="{D3701393-5EF4-4FBF-BA7E-B9FCC5433AB3}">
+					<ChildrenList>
+						<Action Name="" ID="{BD4CDA9A-1AE0-4C44-9B47-A67D8A272455}" ShortID="37089159">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FlareIgnite" ID="{A90E4793-8360-45EA-8E5C-C3AB602C4388}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_FlareIgnite" ID="{B1A9838C-53FE-4E91-86AD-D1A7B0C281F0}">
+					<ChildrenList>
+						<Action Name="" ID="{D39DF213-2049-439F-8C23-A4D4434321E2}" ShortID="598075495">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FlareIgnite" ID="{A90E4793-8360-45EA-8E5C-C3AB602C4388}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

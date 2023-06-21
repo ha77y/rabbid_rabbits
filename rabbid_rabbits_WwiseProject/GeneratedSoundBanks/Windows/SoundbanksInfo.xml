@@ -167,7 +167,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{43637E53-AF92-EB9E-93DB-EE7FBAA11D6E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FCE86E58-AB3A-C355-2901-59C6DE387E9B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -183,9 +183,17 @@
 					<ShortName>moving-low-frequencies-30842.wav</ShortName>
 					<CachePath>SFX/moving-low-frequencies-30842_86020D22.wem</CachePath>
 				</File>
+				<File Id="298035340" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
+					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_7D2F4E5D.wem</CachePath>
+				</File>
 				<File Id="328404054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>underwater-ambience-6201.wav</ShortName>
 					<CachePath>SFX/underwater-ambience-6201_F51946C9.wem</CachePath>
+				</File>
+				<File Id="354413542" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
+					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_FA86862F.wem</CachePath>
 				</File>
 				<File Id="378614413" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Submarine Creaking Sound Effect.wav</ShortName>
@@ -203,8 +211,19 @@
 					<ShortName>underwater-ambience-6201.wav</ShortName>
 					<CachePath>SFX/underwater-ambience-6201_7C29CD87.wem</CachePath>
 				</File>
+				<File Id="978712793" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
+					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_33C36C5C.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="1139110184" Name="Play_FlareIgnite" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="298035340"/>
+						<MediaRef Id="354413542"/>
+						<MediaRef Id="978712793"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3738780720" Name="Play_MainMenu" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="728202173"/>
@@ -229,9 +248,10 @@
 						<MediaRef Id="837911073"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2191334314" Name="Stop_FlareIgnite" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="890527358" Name="Stop_MainMenu" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9F1CD31D-4892-8067-8031-B277CF2CFEE0}</FileHash>
+	<FileHash>{0E2FD325-6212-DDA1-1EB8-235483A4FE17}</FileHash>
 </SoundBanksInfo>
