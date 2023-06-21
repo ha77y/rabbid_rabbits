@@ -35,10 +35,6 @@ public class Door : InteractableObject
 
         while (time < duration)
         {
-            //if (enter && time > 0.3f && time < 0.6f)
-            //{
-            //    player.transform.position = Vector3.Lerp(playerStartPos, playerStartPos + player.transform.forward * -1f, time-0.4f / 0.6f);
-            //}
             time += Time.deltaTime;
             cylinder.RotateAround(rotatePoint.position, Vector3.up, -90/duration * Time.deltaTime);
             yield return null;           
