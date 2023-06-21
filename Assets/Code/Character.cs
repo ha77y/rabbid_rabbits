@@ -118,7 +118,7 @@ public class Character : MonoBehaviour
     public int maxItems = 3;
 
 
-    public Vector2 lookDirection;
+    public Vector3 lookDirection;
     // Start is called before the first frame update
     void Start()
     {
