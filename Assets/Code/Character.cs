@@ -185,7 +185,7 @@ public class Character : MonoBehaviour
             }
             lookDirection.y -= 180;
             lookDirection.y = 180 - lookDirection.y;
-            Debug.Log(lookDirection);
+            //Debug.Log(lookDirection);
     }
 
     public void doorMove(Door door)

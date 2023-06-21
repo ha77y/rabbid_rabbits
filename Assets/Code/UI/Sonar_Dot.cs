@@ -17,8 +17,8 @@ public class Sonar_Dot : MonoBehaviour
         
     }
 
-    public void resetLifespan()
-    {
-        lifespan = 3f;
-    }
+    //public void resetLifespan()
+    //{
+    //    lifespan = 3f;
+    //}
 }
