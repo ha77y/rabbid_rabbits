@@ -81,6 +81,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c499ae5864d3a498f7bee5781a26a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  RB: {fileID: 8088046402447179375}
+  Thrust: 20
+  Flare: {fileID: 3674973213533175035, guid: 2a626f968669d404fbd021f69e010843, type: 3}
 --- !u!54 &8088046402447179375
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Flareshot : MonoBehaviour
 {
     public Character player;
-    public Rigidbody RB;
     public float Thrust = 20f;
     public GameObject Flare;
     // Start is called before the first frame update
@@ -21,7 +20,8 @@ public class Flareshot : MonoBehaviour
         {
             if(player.numFlare <= 1)
             {
-                instantiate
+                Instantiate(Flare);
+
             }
         }
     }
