@@ -6,14 +6,10 @@ using UnityEngine;
 public class Sonar_Dot : MonoBehaviour
 {
 
-    public Vector2 Location;
-    public 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public Vector2 location;
+    //public float playerRotation;
+    public float lifespan = 3f;
+    
     // Update is called once per frame
     void Update()
     {
