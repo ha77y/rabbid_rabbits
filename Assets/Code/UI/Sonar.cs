@@ -32,6 +32,6 @@ public class Sonar : MonoBehaviour
         rotation = player.transform.eulerAngles.y;
         sonarDirection.transform.rotation = Quaternion.Euler(0, 0, -rotation);
         sonarSweep.transform.Rotate(0, 0, 1);
-        Hits = BoxCastAll(player.transform,boxSize)
+        //Hits = BoxCastAll(player.transform, boxSize, player.lookDirection, 
     }
 }
