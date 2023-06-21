@@ -10,8 +10,6 @@ public class Sonar : MonoBehaviour
 
     public float rotation = 0;
 
-    public Image sonarBase;
-
     public Image sonarSweep;
     public Image sonarDirection;
     // Start is called before the first frame update
@@ -21,14 +19,21 @@ public class Sonar : MonoBehaviour
     public RaycastHit[] Hits;
     public Vector3 boxSize;
 
+    List<Transform> recognised = new List<Transform>();
+    List<GameObject> dots = new List<GameObject>();
+    List<Transform> currentHits = new List<Transform>(); 
 
-    public Quaternion orientation;
-    public Vector3 direction;
-
+    public GameObject dotPF;
     public float angle = 0;
+
+    public float sonarSpeed = 0.5f;
+    /// less is longer
+
+    public GameObject sonarBase;
     void Start()
     {
         boxSize = new Vector3(0.1f, 400, 0.1f) ;
+        //transform.Rotate(0, 180, 0);
     }
 
 
@@ -37,34 +42,54 @@ public class Sonar : MonoBehaviour
 
         rotation = player.transform.eulerAngles.y;
         sonarDirection.transform.rotation = Quaternion.Euler(0, 0, -rotation);
-        sonarSweep.transform.Rotate(0, 0, 1);
+        sonarSweep.transform.Rotate(0, 0, sonarSpeed);
+
+        transform.position = player.transform.position;
+        transform.Rotate(0, -sonarSpeed, 0);
+
+        Hits = Physics.BoxCastAll(player.transform.position, boxSize, transform.forward, transform.rotation, sonarRadius);
 
 
-        //direction = player.transform.forward;
-        //direction.y = 0;
-        if (angle >= 360)
+        currentHits.Clear();
+
+    for (int i = 0; i < Hits.Length; i++)
+    {
+        if (Hits[i].transform.tag == "Sonar")
         {
-            angle = 0;
-
-        }
-        else
-        {
-            angle++;
-        }
-
-        direction = new Vector3(angle,0,0);
-
-        Hits = Physics.BoxCastAll(player.transform.position, boxSize, new Vector3(0, angle, 0), orientation, sonarRadius);
-
-
-
-        for (int i = 0; i < Hits.Length; i++)
-        {
-            if (Hits[i].transform.tag == "Sonar")
-            {
-                Debug.Log(Hits[i].transform);
-            }
-
+            currentHits.Add(Hits[i].transform);
         }
     }
+
+    for (int i = 0; i < currentHits.Count; i++)
+    {
+        for (int j = 0; j < recognised.Count; j++)
+        {
+
+            if (currentHits[i].transform == recognised[j])
+            {
+                dots[j].GetComponent<Sonar_Dot>().initiate(transform.position, recognised[j].position, sonarRadius);
+                return;
+            }
+            
+        }
+        recognised.Add(Hits[i].transform);
+        dots.Add(Instantiate(dotPF, sonarBase.transform));
+        dots[dots.Count - 1].GetComponent<Sonar_Dot>().initiate(transform.position, recognised[recognised.Count - 1].position, sonarRadius);
+    }
+
+    for (int i = 0; i < recognised.Count; i++)
+    {
+
+        //Check if expired
+        if (dots[i].GetComponent<Sonar_Dot>().lifespan <= 0)
+        {
+            dots[i].GetComponent<Sonar_Dot>().destroy();
+            dots.RemoveAt(i);
+            recognised.RemoveAt(i);
+        }
+
+    }
+
+}
+ 
 }
