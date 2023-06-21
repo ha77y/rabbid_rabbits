@@ -28,6 +28,7 @@ public class Flareshot : MonoBehaviour
                 currentflare = Instantiate(Flare,player.transform.position+player.transform.forward * 1,rotation);
                 rb = currentflare.GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * Thrust,ForceMode.Impulse);
+                player.numFlare--;
             }
         }
     }
