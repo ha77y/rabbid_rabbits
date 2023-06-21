@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sonar_Dot : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class Sonar_Dot : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void resetLifespan()
+    {
+        lifespan = 3f;
     }
 }
