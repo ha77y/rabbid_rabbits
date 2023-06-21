@@ -14,6 +14,7 @@ public class Sonar : MonoBehaviour
     public Image sonarBase;
 
     public Image sonarSweep;
+    public Image sonarDirection;
     // Start is called before the first frame update
 
     void Start()
@@ -25,7 +26,7 @@ public class Sonar : MonoBehaviour
     void Update()
     {
         rotation = player.transform.eulerAngles.y;
-        sonarBase.transform.rotation = Quaternion.Euler(0, 0, -rotation);
+        sonarDirection.transform.rotation = Quaternion.Euler(0, 0, -rotation);
 
         Debug.Log(rotation);
 
