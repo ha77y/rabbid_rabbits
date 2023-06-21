@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIController : MonoBehaviour
+public class Sonar_Dot : MonoBehaviour
 {
+
+    public Vector2 Location;
+    public 
     // Start is called before the first frame update
     void Start()
     {
