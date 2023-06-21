@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,9 +18,12 @@ public class Sonar : MonoBehaviour
     public Image sonarDirection;
     // Start is called before the first frame update
 
+
+    public RaycastHit[] Hits;
+    public Vector3 boxSize;
     void Start()
     {
-        
+        boxSize = new Vector3(1, 400, 0.1f);
     }
 
 
@@ -27,10 +31,7 @@ public class Sonar : MonoBehaviour
     {
         rotation = player.transform.eulerAngles.y;
         sonarDirection.transform.rotation = Quaternion.Euler(0, 0, -rotation);
-
-        Debug.Log(rotation);
-
-
         sonarSweep.transform.Rotate(0, 0, 1);
+        Hits = BoxCastAll(player.transform,boxSize)
     }
 }
