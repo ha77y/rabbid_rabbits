@@ -188,7 +188,7 @@ public class Character : MonoBehaviour
         float interactDistance = 2f;
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
         {
-            //Debug.Log(raycastHit);
+            Debug.Log(raycastHit);
 
             //if the parent is an interactable
             if (raycastHit.transform.parent.TryGetComponent(out InteractableObject objectInteract))
@@ -196,6 +196,10 @@ public class Character : MonoBehaviour
 
                 Debug.Log("interact");
                 objectInteract.Interact(this);
+            }
+            else
+            {
+
             }
         }
     }
@@ -239,7 +243,7 @@ public class Character : MonoBehaviour
             entDist = -1.5f;
         }
 
-        Vector3 targetPosition = door.transform.position + door.transform.forward * entDist;
+        Vector3 targetPosition = door.transform.GetChild(0).transform.position + door.transform.GetChild(0).transform.forward * entDist;
         Vector3 startPosition = player.transform.position;
 
         float time = 0;
@@ -248,7 +252,7 @@ public class Character : MonoBehaviour
         {
             player.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
             time += Time.deltaTime;
-            player.transform.LookAt(door.transform);
+            player.transform.LookAt(door.transform.GetChild(0).transform);
             yield return null;
         }
         player.transform.position = targetPosition;
@@ -272,7 +276,7 @@ public class Character : MonoBehaviour
         duration = 1.5f;
         time = 0;
 
-        targetPosition = door.transform.position + door.transform.forward * entDist;
+        targetPosition = door.transform.GetChild(0).transform.position + door.transform.GetChild(0).transform.forward * entDist;
         startPosition = player.transform.position;
 
         while (time < duration)
