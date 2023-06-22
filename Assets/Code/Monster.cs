@@ -34,7 +34,7 @@ public class RoamingState : ActiveState
         {
             flareDist = Vector3.Distance(flare.currentflare.transform.position, monster.transform.position);
         }
-        if (playerDist <= monster.aggroRange && monster.cooldown <= 0 && flareDist >= monster.flareRange)
+        if (playerDist <= monster.aggroRange && monster.cooldown <= 0 && flareDist >= monster.flareRange && player.movementState is SwimState)
         {
             monster.monsterReturn.transform.position = monster.transform.position;
             monster.monsterReturn.transform.rotation = monster.transform.rotation;
@@ -58,8 +58,12 @@ public class AttackingState : ActiveState
 {
     public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
+
         monster.transform.LookAt(player.transform.position);
         monster.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * monster.moveSpeed);
+
+
+
         float flareDist = 100f;
         //if flare is in range
         if (flare.currentflare)
@@ -73,7 +77,7 @@ public class AttackingState : ActiveState
 
         }
 
-        if( monster.health == 0)
+        if( monster.health == 0 || player.movementState is AnimState)
         {        
             monster.currentState = new RetreatingState();
             //change to retreating
