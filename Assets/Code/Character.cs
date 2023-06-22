@@ -106,7 +106,7 @@ public class Character : MonoBehaviour
 
 
     public MovementState movementState;
-    public float moveSpeed = 2f;
+    public float moveSpeed;
     public float cameraSens = 2f;
     public CapsuleCollider walkCollider;
 
