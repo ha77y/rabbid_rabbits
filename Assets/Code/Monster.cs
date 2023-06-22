@@ -18,8 +18,15 @@ public class ActiveState
 
 public class RoamingState : ActiveState
 {
+    
+    
+
     public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
+        if (monster.cooldown > 0)
+        {
+            monster.cooldown -= Time.deltaTime;
+        }
         float playerDist = Vector3.Distance(player.transform.position, monster.transform.position);
 
         float flareDist = 100f;
@@ -31,14 +38,10 @@ public class RoamingState : ActiveState
         {
             monster.splineAnim.enabled = false;
             monster.currentState = new AttackingState();
-            monster.cooldown = 5;
+            monster.cooldown = 10f;
         }
-        else{
-            if (monster.cooldown > 0)
-            {
-                monster.cooldown -= Time.deltaTime;
-            }
-        }
+        
+ 
     }
     public override void initialize(Monster monster)
     {
@@ -68,7 +71,8 @@ public class AttackingState : ActiveState
         if( monster.health == 0)
         {        
             monster.splineAnim.enabled = true;
-            monster.currentState = new RetreatingState();
+            monster.currentState = new RoamingState();
+            //change to retreating
         }
 
     }
@@ -104,7 +108,10 @@ public class FlaringState : ActiveState
         }
         else
         {
-            monster.currentState = new RetreatingState();
+            monster.splineAnim.enabled = true;
+            monster.currentState = new RoamingState();
+            //change to retreating
+
         }
 
     }
