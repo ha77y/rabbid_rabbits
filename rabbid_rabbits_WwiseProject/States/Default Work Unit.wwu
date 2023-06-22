@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<StateGroup Name="InWater" ID="{4B8AC211-8B09-4963-93B4-1A86A97456AF}">
 					<ChildrenList>
+						<State Name="None" ID="{13EDF1B6-89FF-456A-9B81-D39FD3440BCC}"/>
 						<State Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
 						<State Name="InBase" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
 					</ChildrenList>
@@ -25,6 +26,7 @@
 				</StateGroup>
 				<StateGroup Name="BeingAttacked" ID="{7557B079-3EA6-4D01-89A2-873425E6E6F0}">
 					<ChildrenList>
+						<State Name="None" ID="{A444FFD5-DB3A-4674-98DD-6F3653FA44E1}"/>
 						<State Name="Safe" ID="{B1414A53-A8B9-4720-8D27-029A8BE40D43}"/>
 						<State Name="Attacked" ID="{73FAA818-7BB9-48DF-8666-FE46C15910CE}"/>
 					</ChildrenList>

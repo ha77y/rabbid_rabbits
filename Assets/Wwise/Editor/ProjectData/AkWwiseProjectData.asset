@@ -738,7 +738,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 905e9703bc66234383c1738154203f84
     GuidInternal: 
-    m_lastTime: -8585141418473860715
+    m_lastTime: -8585141385581007573
     List:
     - name: BeingAttacked
       guid: 79b05775a63e014d89a2873425e6e6f0
@@ -771,6 +771,22 @@ MonoBehaviour:
         - ElementName: Attacked
           ObjectType: 8
           guid: 18a8fa73b97bdf488666fe46c15910ce
+      - name: None
+        guid: d5ff44a43adb744698dd6f3653fa44e1
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 905e9703bc66234383c1738154203f84
+        - ElementName: BeingAttacked
+          ObjectType: 9
+          guid: 79b05775a63e014d89a2873425e6e6f0
+        - ElementName: None
+          ObjectType: 8
+          guid: d5ff44a43adb744698dd6f3653fa44e1
       - name: Safe
         guid: 534a41b1b9a820478d27029a8be40d43
         id: 938058686
@@ -837,6 +853,22 @@ MonoBehaviour:
         - ElementName: InWater
           ObjectType: 8
           guid: 5349e8aef53fbb4292b3de9845fc91ed
+      - name: None
+        guid: b6f1ed13ff896a459b81d39fd3440bcc
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 905e9703bc66234383c1738154203f84
+        - ElementName: InWater
+          ObjectType: 9
+          guid: 11c28a4b098b634993b41a86a97456af
+        - ElementName: None
+          ObjectType: 8
+          guid: b6f1ed13ff896a459b81d39fd3440bcc
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -949,8 +981,8 @@ MonoBehaviour:
         guid: b32c882770db9346a57f56be8dacc9ca
       Path: Triggers\Default Work Unit\New_Trigger
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0e0000000f00000010000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
