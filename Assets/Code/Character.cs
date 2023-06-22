@@ -39,7 +39,6 @@ public class SwimState : MovementState
 
     public override void initialize(Character player)
     {
-        player.moveSpeed = 2f;
         player.GetComponent<Rigidbody>().drag = 3;
         player.GetComponent<Rigidbody>().useGravity = false ;
         player.GetComponent<CapsuleCollider>().enabled = false;
@@ -74,7 +73,6 @@ public class WalkState : MovementState
 
     public override void initialize(Character player)
     {
-        player.moveSpeed = 4f;
         player.GetComponent<Rigidbody>().drag = 5;
         player.GetComponent<Rigidbody>().useGravity = true;
         player.GetComponent<CapsuleCollider>().enabled = true;
@@ -106,7 +104,7 @@ public class Character : MonoBehaviour
 
 
     public MovementState movementState;
-    public float moveSpeed;
+    public float moveSpeed = 2f;
     public float cameraSens = 2f;
     public CapsuleCollider walkCollider;
 
