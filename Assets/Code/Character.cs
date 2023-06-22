@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 
@@ -159,9 +158,13 @@ public class Character : MonoBehaviour
         float interactDistance = 2f;
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
         {
-            //if the interact is a cube interact
+            Debug.Log(raycastHit);
+
+            //if the interact is a door interact
             if (raycastHit.transform.parent.TryGetComponent(out InteractableObject objectInteract))
             {
+
+                Debug.Log("interact");
                 objectInteract.Interact(this);
             }
         }
