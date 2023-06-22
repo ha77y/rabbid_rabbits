@@ -146,11 +146,11 @@ public class Character : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeSelf); //Toggle Flashlight
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift)&& movementState is SwimState)
         {
             transform.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * moveSpeed);
         }
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftControl) && movementState is SwimState)
         {
             transform.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * -moveSpeed);
         }
