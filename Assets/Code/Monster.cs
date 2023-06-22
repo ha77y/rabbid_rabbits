@@ -36,7 +36,11 @@ public class RoamingState : ActiveState
         }
         if (playerDist <= monster.aggroRange && monster.cooldown <= 0 && flareDist >= monster.flareRange)
         {
+            monster.monsterReturn.transform.position = monster.transform.position;
             monster.splineAnim.enabled = false;
+
+
+
             monster.currentState = new AttackingState();
             monster.cooldown = 10f;
         }
@@ -70,8 +74,7 @@ public class AttackingState : ActiveState
 
         if( monster.health == 0)
         {        
-            monster.splineAnim.enabled = true;
-            monster.currentState = new RoamingState();
+            monster.currentState = new RetreatingState();
             //change to retreating
         }
 
@@ -87,8 +90,17 @@ public class RetreatingState : ActiveState
     public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
 
+        monster.transform.LookAt(monster.monsterReturn.transform.position);
+        monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster.monsterReturn.transform.position, 5f * Time.deltaTime);
 
-        //spline.SplineUtility.GetNearestPoint<Spline>(Spline, spline, monster.transform., out float3 nearest)
+
+        if (monster.transform.position == monster.monsterReturn.transform.position)
+        {
+            Debug.Log("returned");
+            monster.splineAnim.enabled = true;
+            monster.currentState = new RoamingState();
+        }
+
     }
     public override void initialize(Monster monster)
     {
@@ -108,8 +120,8 @@ public class FlaringState : ActiveState
         }
         else
         {
-            monster.splineAnim.enabled = true;
-            monster.currentState = new RoamingState();
+
+            monster.currentState = new RetreatingState();
             //change to retreating
 
         }
@@ -136,7 +148,7 @@ public class Monster : MonoBehaviour
 
     public float aggroRange = 35f;
 
-    public float cooldown = 10f;
+    public float cooldown = 0f;
 
     public GameObject monsterPath;
 
@@ -149,6 +161,9 @@ public class Monster : MonoBehaviour
 
 
     public float health = 10f;
+
+    public GameObject monsterReturn;
+
     public ActiveState currentState = new RoamingState();
     void Start()
     {

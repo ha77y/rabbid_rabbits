@@ -102,6 +102,7 @@ public class AnimState : MovementState
 
 public class Character : MonoBehaviour
 {
+    public int samples = 0;
 
 
     public MovementState movementState;
@@ -116,7 +117,7 @@ public class Character : MonoBehaviour
 
     public int maxItems = 3;
 
-
+    public float iFrame = 0f;
     public Vector3 lookDirection;
     // Start is called before the first frame update
     void Start()
@@ -128,6 +129,11 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(iFrame > 0)
+        {
+            iFrame -= Time.deltaTime;
+        }
 
         //Cursor Lock
         if (Input.GetMouseButtonDown(0))
@@ -270,7 +276,14 @@ public class Character : MonoBehaviour
         }
     }
 
-
+    public void takeDamage()
+    {
+        if(iFrame <= 0)
+        {
+            health -= 5;
+            iFrame = 1;
+        }
+    }
 
 
 }
