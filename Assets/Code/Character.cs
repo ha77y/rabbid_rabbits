@@ -145,6 +145,15 @@ public class Character : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeSelf); //Toggle Flashlight
         }
 
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * moveSpeed);
+        }
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            transform.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * -moveSpeed);
+        }
+
         movementState.movement(this);
 
 
