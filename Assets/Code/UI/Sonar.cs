@@ -72,6 +72,8 @@ public class Sonar : MonoBehaviour
             }
             
         }
+
+        Debug.Log(currentHits.Count);
         recognised.Add(Hits[i].transform);
         dots.Add(Instantiate(dotPF, sonarBase.transform));
         dots[dots.Count - 1].GetComponent<Sonar_Dot>().initiate(transform.position, recognised[recognised.Count - 1].position, sonarRadius);
