@@ -43,7 +43,7 @@ public class RoamingState : ActiveState
 
 
             monster.currentState = new AttackingState();
-            monster.cooldown = 10f;
+            monster.cooldown = 5f;
         }
         
  
@@ -90,15 +90,16 @@ public class RetreatingState : ActiveState
 {
     public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
+        monster.health = 10;
 
-        //monster.transform.LookAt(monster.monsterReturn.transform.position);
+        monster.transform.LookAt(monster.monsterReturn.transform.position);
 
-        Quaternion movingRotation = Quaternion.identity;
+        //Quaternion movingRotation = Quaternion.identity;
 
-        movingRotation.eulerAngles = Vector3.RotateTowards(monster.transform.rotation.eulerAngles, monster.monsterReturn.transform.rotation.eulerAngles, 1f * Time.deltaTime, 1f * Time.deltaTime);
+        //movingRotation.eulerAngles = Vector3.RotateTowards(monster.transform.rotation.eulerAngles, monster.monsterReturn.transform.rotation.eulerAngles, 1f * Time.deltaTime, 0.1f);
 
-        monster.transform.rotation = movingRotation;
-        monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster.monsterReturn.transform.position, 5f * Time.deltaTime);
+        //monster.transform.rotation = movingRotation;
+        monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster.monsterReturn.transform.position, 8f * Time.deltaTime);
 
 
         if (monster.transform.position == monster.monsterReturn.transform.position)
@@ -173,6 +174,9 @@ public class Monster : MonoBehaviour
     public GameObject monsterReturn;
 
     public ActiveState currentState = new RoamingState();
+
+    public GameObject damagePlayer;
+
     void Start()
     {
     }       
@@ -181,6 +185,37 @@ public class Monster : MonoBehaviour
     void Update()
     {
         currentState.movement(this, player, flare, spline);
+        checkForPlayer();
     }
 
+
+    public void takeDamage()
+    {
+        if(currentState is AttackingState)
+        if(health <= 0)
+        {
+            currentState = new RetreatingState();
+            
+        }
+        else
+        {
+            health -= 1;
+        }
+
+       // Debug.Log(currentState);
+    }
+
+
+    public void checkForPlayer()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, 1f))
+        {
+
+            //Debug.Log(raycastHit.transform);
+            if (raycastHit.transform.TryGetComponent(out Character player))
+            {
+                player.takeDamage();
+            }
+        }
+    }
 }

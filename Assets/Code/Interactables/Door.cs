@@ -18,6 +18,10 @@ public class Door : InteractableObject
            
                 player.doorMove(this);
             }
+            else
+            {
+                Debug.Log("NoKeycard");
+            }
         }
         else
         {

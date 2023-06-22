@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 
 
@@ -33,7 +33,7 @@ public class SwimState : MovementState
 
             player.movementState = new WalkState();
             player.movementState.initialize(player);
-            Debug.Log("WalkState");
+            //Debug.Log("WalkState");
 
     }
 
@@ -67,7 +67,7 @@ public class WalkState : MovementState
 
          player.movementState = new SwimState();
          player.movementState.initialize(player);
-         Debug.Log("SwimState");
+         //Debug.Log("SwimState");
 
     }
 
@@ -118,6 +118,8 @@ public class Character : MonoBehaviour
 
     public float iFrame = 0f;
     public Vector3 lookDirection;
+
+    public GameObject cursor;
     // Start is called before the first frame update
     void Start()
     {
@@ -128,14 +130,18 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(iFrame > 0)
+        //interactHighlight();
+        if (iFrame > 0)
         {
             iFrame -= Time.deltaTime;
         }
 
-        //Cursor Lock
+
         if (Input.GetMouseButtonDown(0))
+            knife();
+
+            //Cursor Lock
+            if (Input.GetMouseButtonDown(1))
             Cursor.lockState = CursorLockMode.Locked;
 
         if (Input.GetKey(KeyCode.Space))
@@ -185,16 +191,16 @@ public class Character : MonoBehaviour
     private void interactionCheck()
     {
 
-        float interactDistance = 2f;
+        float interactDistance = 3f;
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
         {
-            Debug.Log(raycastHit);
+            //Debug.Log(raycastHit);
 
             //if the parent is an interactable
             if (raycastHit.transform.parent.TryGetComponent(out InteractableObject objectInteract))
             {
 
-                Debug.Log("interact");
+                //Debug.Log("interact");
                 objectInteract.Interact(this);
             }
             else
@@ -237,13 +243,21 @@ public class Character : MonoBehaviour
     IEnumerator UseDoor(Character player, Door door, bool enter)
     {
 
-        float entDist = 3f;
-        if (!enter)
+        Transform first;
+        Transform second;
+
+        if (enter)
         {
-            entDist = -1.5f;
+            first = door.transform.GetChild(2);
+            second = door.transform.GetChild(3);
+        }
+        else
+        {
+            first = door.transform.GetChild(3);
+            second = door.transform.GetChild(2);
         }
 
-        Vector3 targetPosition = door.transform.GetChild(0).transform.position + door.transform.GetChild(0).transform.forward * entDist;
+        Vector3 targetPosition = first.position;
         Vector3 startPosition = player.transform.position;
 
         float time = 0;
@@ -252,7 +266,7 @@ public class Character : MonoBehaviour
         {
             player.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
             time += Time.deltaTime;
-            player.transform.LookAt(door.transform.GetChild(0).transform);
+            player.transform.LookAt(second);
             yield return null;
         }
         player.transform.position = targetPosition;
@@ -267,16 +281,10 @@ public class Character : MonoBehaviour
         }
 
 
-        entDist = -1.5f;
-        if (!enter)
-        {
-            ///EXIT DISTANCE
-            entDist = 4.5f;
-        }
         duration = 1.5f;
         time = 0;
 
-        targetPosition = door.transform.GetChild(0).transform.position + door.transform.GetChild(0).transform.forward * entDist;
+        targetPosition = second.position;
         startPosition = player.transform.position;
 
         while (time < duration)
@@ -304,7 +312,7 @@ public class Character : MonoBehaviour
         if(iFrame <= 0)
         {
             health -= 5;
-            iFrame = 1;
+            iFrame = 0.2f;
         }
     }
 
@@ -317,5 +325,39 @@ public class Character : MonoBehaviour
     {
 
     }
+
+    public void knife()
+    {
+       // Debug.Log("Knife");
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, 2f)){
+            //Debug.Log(raycastHit.transform);
+            if (raycastHit.transform.TryGetComponent(out Monster monster))
+            {
+                //Debug.Log("MonsterHit");
+                monster.takeDamage();
+            }
+        }
+
+    }
+
+
+    //public void interactHighlight()
+    //{
+    //    float interactDistance = 3f;
+    //    cursor.GetComponent<Image>().color = Color.white;
+    //    if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
+    //    {
+
+
+    //        if (raycastHit.transform.parent)
+    //        {
+    //        if (raycastHit.transform.TryGetComponent(out InteractableObject objectInteract))
+    //        {
+    //            cursor.GetComponent<Image>().color = Color.blue ;
+    //        }
+    //        }
+
+    //    }
+    //}
 
 }

@@ -9,6 +9,7 @@ public class HealthStation : InteractableObject
         if (player.health < 100)
         {
             player.health = 100;
+            Destroy(gameObject);
         }
     }
 }
