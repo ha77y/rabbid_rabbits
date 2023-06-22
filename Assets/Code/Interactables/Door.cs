@@ -12,21 +12,26 @@ public class Door : InteractableObject
         player.doorMove(this);
     }
 
-
-    public void open(Character player, bool enter)
+    public void pass(Character player, bool enter)
     {
-        StartCoroutine(Open(this, player, enter));
+        StartCoroutine(Pass(this, player, enter));
     }
 
-    public void close()
+    IEnumerator Pass(Door door, Character player, bool enter)
     {
-        StartCoroutine(Close(this));
-    }
 
-    IEnumerator Open(Door door, Character player, bool enter)
-    {
-        float duration = 1.5f;
         float time = 0;
+        float duration = 1;
+        while (time < duration)
+        {
+            //delay
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+
+        duration = 1.5f;
+        time = 0;
         Transform rotatePoint = transform.GetChild(1);
         Transform cylinder = transform.GetChild(0);
 
@@ -39,22 +44,22 @@ public class Door : InteractableObject
             cylinder.RotateAround(rotatePoint.position, Vector3.up, -90/duration * Time.deltaTime);
             yield return null;           
         }
-        player.doorEnter(player, door, enter);
-    }
+        duration = 0.75f;
+        time = 0;
+        while (time < duration)
+        {
+            //Delay
+            time += Time.deltaTime;
+            yield return null;
+        }
 
-    IEnumerator Close(Door door)
-    {
-        Debug.Log("Closing");
-        float time = 0;
-        float duration = 0.75f;
-
-        Transform rotatePoint = transform.GetChild(1);
-        Transform cylinder = transform.GetChild(0);
-
+        duration = 0.75f;
+        time = 0;
         while (time < duration)
         {
             time += Time.deltaTime;
             cylinder.RotateAround(rotatePoint.position, Vector3.up, 90/duration * Time.deltaTime);
+            yield return null;
             yield return null;
         }
 

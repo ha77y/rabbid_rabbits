@@ -193,13 +193,13 @@ public class Character : MonoBehaviour
         bool enter = false;
         if (movementState is SwimState) {   enter = true;   }
         movementState = new AnimState();
-        float animDur = 1f;
-        StartCoroutine(MoveToDoor(animDur, this, door, enter));
+        StartCoroutine(UseDoor(this, door, enter));
+        door.pass(this, enter);
     }
 
-    IEnumerator MoveToDoor(float duration, Character player, Door door, bool enter)
+    IEnumerator UseDoor(Character player, Door door, bool enter)
     {
-        float time = 0;
+
         float entDist = 3f;
         if (!enter)
         {
@@ -207,8 +207,10 @@ public class Character : MonoBehaviour
         }
 
         Vector3 targetPosition = door.transform.position + door.transform.forward * entDist;
-
         Vector3 startPosition = player.transform.position;
+
+        float time = 0;
+        float duration = 1f;
         while (time < duration)
         {
             player.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
@@ -218,47 +220,35 @@ public class Character : MonoBehaviour
         }
         player.transform.position = targetPosition;
 
-        door.open(player, enter);
-    }
+        time = 0;
+        duration = 1.5f;
+        while (time < duration)
+        {
+            //delay
+            time += Time.deltaTime;
+            yield return null;
+        }
 
-    public void doorEnter(Character player, Door door, bool enter)
-    {
 
-        StartCoroutine(Enter(player, door, enter));
-    }
-
-    IEnumerator Enter(Character player, Door door, bool enter)
-    {
-        float duration = 1.5f;
-        Debug.Log("Entering");
-        float time = 0;
-        float entDist = -1.5f;
-
-        bool closed = false;
+        entDist = -1.5f;
         if (!enter)
         {
             ///EXIT DISTANCE
             entDist = 4.5f;
         }
+        duration = 1.5f;
+        time = 0;
 
-        Vector3 targetPosition = door.transform.position + door.transform.forward * entDist;
+        targetPosition = door.transform.position + door.transform.forward * entDist;
+        startPosition = player.transform.position;
 
-        Vector3 startPosition = player.transform.position;
         while (time < duration)
         {
             player.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
             time += Time.deltaTime;
-            //player.transform.LookAt(door.transform);
-
-            if (time >= 0.75 && closed == false)
-            {
-                door.close();
-                closed = true;
-            }
             yield return null;
         }
         player.transform.position = targetPosition;
-
 
 
         // should prolly put this in the animstate for consistency
@@ -270,8 +260,6 @@ public class Character : MonoBehaviour
         {
             player.movementState = new SwimState();
         }
-
-
     }
 
 
