@@ -500,7 +500,7 @@
 							<PropertyList>
 								<Property Name="FadeOutDuration" Type="Real64" Value="0.585973000599204"/>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimEnd" Type="Real64" Value="0.926512283669944"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.68735680800818"/>
 							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>sonar-ping-95840.wav</AudioFile>
@@ -511,6 +511,32 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="sonar-ping-95840" ID="{8F1341E5-FD6C-43C9-9D1A-8C351F0A8CF9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="deep-sea-ambience-6933" ID="{A28ED5F2-4682-4424-9AC8-7B21DB17C2DC}" ShortID="346165866">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="deep-sea-ambience-6933" ID="{05B706AE-6AD2-4143-8C3B-191340612DAA}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>deep-sea-ambience-6933.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="175696504"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="deep-sea-ambience-6933" ID="{05B706AE-6AD2-4143-8C3B-191340612DAA}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

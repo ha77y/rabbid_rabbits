@@ -4,6 +4,12 @@
 		<WorkUnit Name="Default Work Unit" ID="{45217E3C-CC52-44AE-A322-F1CBC084C514}" PersistMode="Standalone">
 			<ChildrenList>
 				<GameParameter Name="Depth" ID="{4161B755-E33F-4189-9DE4-BE2598D72D49}"/>
+				<GameParameter Name="Chased" ID="{6F7CFC30-4888-4B2C-B520-6345C7F21B6D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

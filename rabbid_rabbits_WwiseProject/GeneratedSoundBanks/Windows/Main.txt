@@ -19,5 +19,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	728202173	LWD Menu theme	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\LWD Menu theme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MainMenu\LWD Menu theme\LWD Menu theme		2822496
 	837911073	underwater-ambience-6201_01	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_7C29CD87.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingieMenu\underwater-ambience-6201_01		316360
 	978712793	designed-fire-winds-swoosh-04-116788	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\designed-fire-winds-swoosh-04-116788_DD3EBE07.wem		\Actor-Mixer Hierarchy\Default Work Unit\Flare\FlareIgnite\designed-fire-winds-swoosh-04-116788		1350264
-	1022142027	sonar-ping-95840	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\sonar-ping-95840_E2A5C1A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\sonar-ping-95840		81814
+	1022142027	sonar-ping-95840	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\sonar-ping-95840_8DE10FD1.wem		\Actor-Mixer Hierarchy\Default Work Unit\sonar-ping-95840		148920
 

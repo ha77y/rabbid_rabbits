@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8B5A23E5-1DD0-46FC-B7C0-A761E8AFD472}" SchemaVersion="110">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{8B5A23E5-1DD0-46FC-B7C0-A761E8AFD472}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8B5A23E5-1DD0-46FC-B7C0-A761E8AFD472}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Chased" ID="{BF17AE76-D31A-4805-A10C-548006E018B5}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
