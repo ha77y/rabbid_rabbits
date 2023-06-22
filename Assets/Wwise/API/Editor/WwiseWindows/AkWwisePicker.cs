@@ -47,6 +47,11 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 		m_SearchField.SetFocus();
 	}
 
+	public void OnDisable()
+	{
+		m_treeView.SaveExpansionStatus();
+	}
+
 	public static void Refresh(bool ignoreIfWaapi = false)
 	{
 		if (AkWwiseProjectInfo.GetData().currentDataSource == AkWwiseProjectInfo.DataSourceType.WwiseAuthoring && ignoreIfWaapi)

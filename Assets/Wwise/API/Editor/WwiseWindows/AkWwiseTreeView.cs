@@ -876,14 +876,6 @@ public class AkWwiseTreeView : TreeView
 		m_dataSource.FetchData();
 	}
 
-	~AkWwiseTreeView()
-	{
-		if (m_pickerMode != PickerMode.ComponentPicker && StoredSearchString == System.String.Empty)
-		{
-			SaveExpansionStatus();
-		}
-	}
-
 #endregion
 }
 

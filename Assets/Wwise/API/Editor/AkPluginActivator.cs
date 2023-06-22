@@ -143,6 +143,10 @@ public class AkPluginActivator
 
 	static AkPluginActivator()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
 		ActivatePluginsForEditor();
 	}
 

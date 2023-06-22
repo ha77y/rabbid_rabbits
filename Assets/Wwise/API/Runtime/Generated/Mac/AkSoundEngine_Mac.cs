@@ -174,6 +174,8 @@ public partial class AkSoundEngine {
 
   public static AKRESULT SetMaxNumVoicesLimit(ushort in_maxNumberVoices) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SetMaxNumVoicesLimit(in_maxNumberVoices); }
 
+  public static AKRESULT SetJobMgrMaxActiveWorkers(uint in_jobType, uint in_uNewMaxActiveWorkers) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SetJobMgrMaxActiveWorkers(in_jobType, in_uNewMaxActiveWorkers); }
+
   public static AKRESULT RenderAudio(bool in_bAllowSyncRender) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_RenderAudio__SWIG_0(in_bAllowSyncRender); }
 
   public static AKRESULT RenderAudio() { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_RenderAudio__SWIG_1(); }

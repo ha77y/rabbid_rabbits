@@ -48,12 +48,14 @@
 				<StateGroup Id="440928865" Name="InWater">
 					<States>
 						<State Id="440928865" Name="InWater"/>
+						<State Id="748895195" Name="None"/>
 						<State Id="2519568939" Name="InBase"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3239871325" Name="BeingAttacked">
 					<States>
 						<State Id="216219666" Name="Attacked"/>
+						<State Id="748895195" Name="None"/>
 						<State Id="938058686" Name="Safe"/>
 					</States>
 				</StateGroup>
@@ -338,25 +340,27 @@
 						<MediaRef Id="837911073"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2191334314" Name="Stop_FlareIgnite" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1520859230" Name="Stop_MainGameMusic" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="890527358" Name="Stop_MainMenu" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2191334314" Name="Stop_FlareIgnite" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1520859230" Name="Stop_MainGameMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="890527358" Name="Stop_MainMenu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="440928865" Name="InWater">
 					<States>
 						<State Id="440928865" Name="InWater"/>
+						<State Id="748895195" Name="None"/>
 						<State Id="2519568939" Name="InBase"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3239871325" Name="BeingAttacked">
 					<States>
 						<State Id="216219666" Name="Attacked"/>
+						<State Id="748895195" Name="None"/>
 						<State Id="938058686" Name="Safe"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5D326832-98D9-6334-E4BA-19B2E51C3FA0}</FileHash>
+	<FileHash>{42466ABB-CAA2-220A-370E-E2852DEA3770}</FileHash>
 </SoundBanksInfo>

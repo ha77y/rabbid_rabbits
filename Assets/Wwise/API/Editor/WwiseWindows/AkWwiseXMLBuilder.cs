@@ -23,7 +23,12 @@ public class AkWwiseXMLBuilder
 
 	static AkWwiseXMLBuilder()
 	{
-		AkWwiseFileWatcher.Instance.PopulateXML += Populate;
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
+		AkWwiseSoundbanksInfoXMLFileWatcher.Instance.PopulateXML += Populate;
 		UnityEditor.EditorApplication.playModeStateChanged += PlayModeChanged;
 	}
 
@@ -32,7 +37,7 @@ public class AkWwiseXMLBuilder
 		if (mode == UnityEditor.PlayModeStateChange.EnteredEditMode)
 		{
 			AkWwiseProjectInfo.Populate();
-			AkWwiseFileWatcher.Instance.StartWatchers();
+			AkWwiseSoundbanksInfoXMLFileWatcher.Instance.StartWatcher();
 		}
 	}
 
