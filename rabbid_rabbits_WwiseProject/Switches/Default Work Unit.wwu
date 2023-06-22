@@ -3,7 +3,46 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{8B5A23E5-1DD0-46FC-B7C0-A761E8AFD472}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="Chased" ID="{BF17AE76-D31A-4805-A10C-548006E018B5}"/>
+				<SwitchGroup Name="MusicSwitch" ID="{BF17AE76-D31A-4805-A10C-548006E018B5}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="BeingChased" ID="{3E099E86-9396-462E-8FAB-206C5116C92B}"/>
+						<Switch Name="Neutral" ID="{8FC9F72E-9DCD-4510-A83D-209970C9E126}"/>
+						<Switch Name="InBase" ID="{A8B4287F-9BE8-4B51-96EF-6F4DF1F61BCB}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="Chased" ID="{6F7CFC30-4888-4B2C-B520-6345C7F21B6D}"/>
+						<Curve Name="" ID="{38D3F483-FFCB-4FC0-A968-6EB465181375}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>2</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>0</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -71,7 +71,7 @@
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
-								<StateRef Name="OutOfWater" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
+								<StateRef Name="InBase" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
 								<CustomState Name="" ID="{3306426C-188F-4EDD-8925-1844E921A50F}" ShortID="722319580">
 									<PropertyList>
 										<Property Name="BypassEffect0" Type="bool" Value="True"/>
