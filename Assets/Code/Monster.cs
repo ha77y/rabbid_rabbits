@@ -37,6 +37,7 @@ public class RoamingState : ActiveState
         if (playerDist <= monster.aggroRange && monster.cooldown <= 0 && flareDist >= monster.flareRange)
         {
             monster.monsterReturn.transform.position = monster.transform.position;
+            monster.monsterReturn.transform.rotation = monster.transform.rotation;
             monster.splineAnim.enabled = false;
 
 
@@ -90,15 +91,22 @@ public class RetreatingState : ActiveState
     public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
 
-        monster.transform.LookAt(monster.monsterReturn.transform.position);
+        //monster.transform.LookAt(monster.monsterReturn.transform.position);
+
+        Quaternion movingRotation = Quaternion.identity;
+
+        movingRotation.eulerAngles = Vector3.RotateTowards(monster.transform.rotation.eulerAngles, monster.monsterReturn.transform.rotation.eulerAngles, 1f * Time.deltaTime, 1f * Time.deltaTime);
+
+        monster.transform.rotation = movingRotation;
         monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster.monsterReturn.transform.position, 5f * Time.deltaTime);
 
 
         if (monster.transform.position == monster.monsterReturn.transform.position)
         {
-            Debug.Log("returned");
             monster.splineAnim.enabled = true;
             monster.currentState = new RoamingState();
+
+
         }
 
     }
@@ -139,7 +147,7 @@ public class FlaringState : ActiveState
 
 public class Monster : MonoBehaviour
 {
-
+    public bool reoriented = false;
     public Flareshot flare;
 
     public Character player;
@@ -174,4 +182,5 @@ public class Monster : MonoBehaviour
     {
         currentState.movement(this, player, flare, spline);
     }
+
 }

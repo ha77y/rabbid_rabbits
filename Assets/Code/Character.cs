@@ -101,7 +101,8 @@ public class AnimState : MovementState
 public class Character : MonoBehaviour
 {
     public int samples = 0;
-
+    public int maxSamples = 4;
+    public bool hasKeycard = false;
 
     public MovementState movementState;
     public float moveSpeed = 2f;
@@ -159,6 +160,17 @@ public class Character : MonoBehaviour
         }
 
         setLookDir();
+
+        if(samples >= maxSamples)
+        {
+            win();
+        }
+
+        if(health <=0 || oxygen <= 0)
+        {
+            lose();
+        }
+
     }
 
     private void interactionCheck()
@@ -283,5 +295,14 @@ public class Character : MonoBehaviour
         }
     }
 
+
+    public void win()
+    {
+
+    }
+    public void lose()
+    {
+
+    }
 
 }
