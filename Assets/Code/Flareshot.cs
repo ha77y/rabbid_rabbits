@@ -7,7 +7,7 @@ public class Flareshot : MonoBehaviour
     public Character player;
     public float Thrust = 20000f;
     public GameObject Flare;
-    private GameObject currentflare;
+    public GameObject currentflare;
     Rigidbody rb;
     Quaternion rotation;
     float timer;
