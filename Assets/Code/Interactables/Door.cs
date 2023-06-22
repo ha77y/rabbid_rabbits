@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class Door : InteractableObject
@@ -7,9 +8,23 @@ public class Door : InteractableObject
 
     public override void Interact(Character player)
     {
-        Debug.Log("SwitchMovement");
-        //player.movementState.switchMovement(player);
-        player.doorMove(this);
+        if(GetTag == "KeycardDoor")
+        {
+            if (player.hasKeycard)
+            {
+                Debug.Log("SwitchMovement");
+                //player.movementState.switchMovement(player);
+                player.doorMove(this);
+            }
+        }
+        else
+        {
+            Debug.Log("SwitchMovement");
+            //player.movementState.switchMovement(player);
+            player.doorMove(this);
+        }
+
+
     }
 
     public void pass(Character player, bool enter)
