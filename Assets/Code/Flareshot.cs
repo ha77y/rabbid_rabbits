@@ -21,7 +21,7 @@ public class Flareshot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if(player.numFlare >= 1)
             {

@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Flare" ID="{0F2F6EBF-4A0D-4F9C-8767-3D76609B58FD}" ShortID="214874085">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="20"/>
+						<Property Name="RadiusMax" Type="Real64" Value="12"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -22,13 +22,13 @@
 											<SegmentShape>Exp3</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1.33005</XPos>
-											<YPos>-3.79215</YPos>
+											<XPos>1</XPos>
+											<YPos>-4</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Log3</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>12</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -58,7 +58,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>12</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>

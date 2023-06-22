@@ -167,7 +167,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FCE86E58-AB3A-C355-2901-59C6DE387E9B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{60FE2094-D964-546E-8F8B-90EC52E798BA}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -177,15 +177,11 @@
 				</File>
 				<File Id="208349530" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Submarine Creaking Sound Effect.wav</ShortName>
-					<CachePath>SFX/Submarine Creaking Sound Effect_F3593E45.wem</CachePath>
+					<CachePath>SFX/Submarine Creaking Sound Effect_A2E1B22C.wem</CachePath>
 				</File>
 				<File Id="296726061" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>moving-low-frequencies-30842.wav</ShortName>
 					<CachePath>SFX/moving-low-frequencies-30842_86020D22.wem</CachePath>
-				</File>
-				<File Id="298035340" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
-					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_7D2F4E5D.wem</CachePath>
 				</File>
 				<File Id="328404054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>underwater-ambience-6201.wav</ShortName>
@@ -193,7 +189,7 @@
 				</File>
 				<File Id="354413542" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
-					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_FA86862F.wem</CachePath>
+					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_EB3D09EC.wem</CachePath>
 				</File>
 				<File Id="378614413" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Submarine Creaking Sound Effect.wav</ShortName>
@@ -213,13 +209,12 @@
 				</File>
 				<File Id="978712793" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
-					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_33C36C5C.wem</CachePath>
+					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_DD3EBE07.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
 				<Event Id="1139110184" Name="Play_FlareIgnite" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="298035340"/>
 						<MediaRef Id="354413542"/>
 						<MediaRef Id="978712793"/>
 					</MediaRefs>
@@ -253,5 +248,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0E2FD325-6212-DDA1-1EB8-235483A4FE17}</FileHash>
+	<FileHash>{7AC5BADF-AB1A-13AE-66D5-2FEA96D05982}</FileHash>
 </SoundBanksInfo>

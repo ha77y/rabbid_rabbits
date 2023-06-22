@@ -387,6 +387,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="designed-fire-winds-swoosh-04-116788_02" ID="{56573A05-D006-4DB0-A6C6-D737362A294E}" ShortID="693170344">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
@@ -398,8 +405,6 @@
 											<ChildrenList>
 												<AudioFileSource Name="designed-fire-winds-swoosh-04-116788" ID="{E1248BD2-B407-4965-B7CF-987160CF5285}">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0360621761658031"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0270466321243523"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="6.91492227979275"/>
 														<Property Name="TrimEnd" Type="Real64" Value="8.64590673575129"/>
@@ -418,6 +423,11 @@
 										<Sound Name="designed-fire-winds-swoosh-04-116788_01" ID="{52F8D507-CD6D-4EDE-B8E6-278C9951BCA6}" ShortID="165616672">
 											<PropertyList>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -431,7 +441,6 @@
 												<AudioFileSource Name="designed-fire-winds-swoosh-04-116788" ID="{69F0A2C2-5338-459B-9A10-4C26CB494ECB}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0450777202072539"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0631088082901545"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="7.47388601036269"/>
 														<Property Name="TrimEnd" Type="Real64" Value="9.01554404145076"/>
