@@ -188,9 +188,9 @@ public class Character : MonoBehaviour
         float interactDistance = 2f;
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
         {
-            Debug.Log(raycastHit);
+            //Debug.Log(raycastHit);
 
-            //if the interact is a door interact
+            //if the parent is an interactable
             if (raycastHit.transform.parent.TryGetComponent(out InteractableObject objectInteract))
             {
 

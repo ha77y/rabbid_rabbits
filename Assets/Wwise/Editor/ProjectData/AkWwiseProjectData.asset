@@ -509,8 +509,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 3c7e214552ccae44a322f1cbc084c514
     GuidInternal: 
-    m_lastTime: -8585141774336490852
+    m_lastTime: -8585141588700634173
     List:
+    - name: Chased
+      guid: 30fc7c6f88482c4bb5206345c7f21b6d
+      id: 493461511
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3c7e214552ccae44a322f1cbc084c514
+      - ElementName: Chased
+        ObjectType: 13
+        guid: 30fc7c6f88482c4bb5206345c7f21b6d
+      Path: Game Parameters\Default Work Unit\Chased
     - name: Depth
       guid: 55b761413fe389419de4be2598d72d49
       id: 681025064
@@ -770,7 +784,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: e5235a8bd01dfc46b7c0a761e8afd472
     GuidInternal: 
-    m_lastTime: -8585141774334226968
+    m_lastTime: -8585141588698870957
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
