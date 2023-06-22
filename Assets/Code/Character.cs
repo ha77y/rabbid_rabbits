@@ -136,6 +136,11 @@ public class Character : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
             Cursor.lockState = CursorLockMode.None;
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeSelf); //Toggle Flashlight
+        }
+
         movementState.movement(this);
 
 
@@ -264,6 +269,8 @@ public class Character : MonoBehaviour
             player.movementState = new SwimState();
         }
     }
+
+
 
 
 }
