@@ -167,7 +167,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{60FE2094-D964-546E-8F8B-90EC52E798BA}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3A9AD397-0A90-0444-4860-F9C189FC88A4}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -211,6 +211,10 @@
 					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
 					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_DD3EBE07.wem</CachePath>
 				</File>
+				<File Id="1022142027" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sonar-ping-95840.wav</ShortName>
+					<CachePath>SFX/sonar-ping-95840_E2A5C1A2.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="1139110184" Name="Play_FlareIgnite" DurationType="Infinite">
@@ -235,6 +239,11 @@
 						<MediaRef Id="594164152"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1793578009" Name="Play_sonar_ping_95840" DurationType="OneShot" DurationMin="1.1210744" DurationMax="1.1210744">
+					<MediaRefs>
+						<MediaRef Id="1022142027"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4025941372" Name="PlayRandomThingie" DurationType="OneShot" DurationMin="2.6866372" DurationMax="8.231735">
 					<MediaRefs>
 						<MediaRef Id="126442879"/>
@@ -248,5 +257,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7AC5BADF-AB1A-13AE-66D5-2FEA96D05982}</FileHash>
+	<FileHash>{BE674DF8-59E5-4FC7-2677-61436EBA3EBD}</FileHash>
 </SoundBanksInfo>

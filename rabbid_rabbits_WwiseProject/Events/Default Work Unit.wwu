@@ -86,6 +86,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sonar_ping_95840" ID="{5D611C65-5D4F-41DD-B597-57D7DB9FA04C}">
+					<ChildrenList>
+						<Action Name="" ID="{6C9C8996-77CD-4BDC-83F8-A2929BCFA920}" ShortID="494387117">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sonar-ping-95840" ID="{0655FA31-0942-4BD1-855C-3F67E512EC22}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
