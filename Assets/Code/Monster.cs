@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,18 +12,20 @@ using UnityEngine.Splines;
 public class ActiveState
 {
 
-    public virtual void movement(Monster monster, Character player, Flareshot flare) { }
+    public virtual void movement(Monster monster, Character player, Flareshot flare, Spline spline) { }
     public virtual void initialize(Monster monster) { }
 }
 
 public class RoamingState : ActiveState
 {
-    public override void movement(Monster monster, Character player, Flareshot flare)
+    public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
         float playerDist = Vector3.Distance(player.transform.position, monster.transform.position);
+
+        float flareDist = 100f;
         if (flare.currentflare)
         {
-            float flareDist = Vector3.Distance(flare.currentflare.transform.position, monster.transform.position);
+            flareDist = Vector3.Distance(flare.currentflare.transform.position, monster.transform.position);
         }
         if (playerDist <= monster.aggroRange && monster.cooldown <= 0 && flareDist >= monster.flareRange)
         {
@@ -45,21 +48,27 @@ public class RoamingState : ActiveState
 
 public class AttackingState : ActiveState
 {
-    public override void movement(Monster monster, Character player, Flareshot flare)
+    public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
-        Debug.Log("Attacking");
         monster.transform.LookAt(player.transform.position);
         monster.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * monster.moveSpeed);
-
+        float flareDist = 100f;
         //if flare is in range
         if (flare.currentflare)
         {
-            float flareDist = Vector3.Distance(flare.currentflare.transform.position, monster.transform.position);
+            flareDist = Vector3.Distance(flare.currentflare.transform.position, monster.transform.position);
         }
-        if (flareDist >= monster.flareRange || monster.health == 0)
-        {
-            monster.currentState = new RetreatingState();
 
+        if (flareDist <= monster.flareRange)
+        {
+            monster.currentState = new FlaringState();
+
+        }
+
+        if( monster.health == 0)
+        {        
+            monster.splineAnim.enabled = true;
+            monster.currentState = new RetreatingState();
         }
 
     }
@@ -71,8 +80,32 @@ public class AttackingState : ActiveState
 
 public class RetreatingState : ActiveState
 {
-    public override void movement(Monster monster, Character player, Flareshot flare)
+    public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
     {
+
+
+        //spline.SplineUtility.GetNearestPoint<Spline>(Spline, spline, monster.transform., out float3 nearest)
+    }
+    public override void initialize(Monster monster)
+    {
+
+    }
+}
+
+public class FlaringState : ActiveState
+{
+    public override void movement(Monster monster, Character player, Flareshot flare, Spline spline)
+    {
+
+        if (flare.currentflare)
+        {
+            monster.transform.LookAt(flare.currentflare.transform.position);
+            monster.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * monster.moveSpeed);
+        }
+        else
+        {
+            monster.currentState = new RetreatingState();
+        }
 
     }
     public override void initialize(Monster monster)
@@ -103,10 +136,12 @@ public class Monster : MonoBehaviour
     public SplineAnimate splineAnim;
 
 
-    public Spline 
+    public Spline spline;
 
     public float flareRange = 20f;
 
+
+    public float health = 10f;
     public ActiveState currentState = new RoamingState();
     void Start()
     {
@@ -115,6 +150,6 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentState.movement(this, player, flare);
+        currentState.movement(this, player, flare, spline);
     }
 }
