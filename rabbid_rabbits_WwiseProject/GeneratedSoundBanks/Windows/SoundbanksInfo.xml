@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A6A71A1F-C2D9-A569-36F2-DB687D42E767}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9876B329-5CF4-A30C-8E14-10540B51C5D2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -31,6 +31,7 @@
 				</Bus>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="493461511" Name="Chased"/>
 				<GameParameter Id="681025064" Name="Depth"/>
 				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
 				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
@@ -47,11 +48,26 @@
 				<StateGroup Id="440928865" Name="InWater">
 					<States>
 						<State Id="440928865" Name="InWater"/>
-						<State Id="748895195" Name="None"/>
-						<State Id="1182647281" Name="OutOfWater"/>
+						<State Id="2519568939" Name="InBase"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3239871325" Name="BeingAttacked">
+					<States>
+						<State Id="216219666" Name="Attacked"/>
+						<State Id="938058686" Name="Safe"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1445037870" Name="MusicSwitch">
+					<GameParameterRef Id="493461511"/>
+					<Switches>
+						<Switch Id="670611050" Name="Neutral"/>
+						<Switch Id="1753303624" Name="BeingChased"/>
+						<Switch Id="2519568939" Name="InBase"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -167,13 +183,17 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{49123E7C-353E-C3B3-5919-12F49357ECC3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0432F00F-5B42-032D-83F5-2B2AEC8227AF}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="126442879" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>underwater-ambience-6201.wav</ShortName>
 					<CachePath>SFX/underwater-ambience-6201_E42ACF45.wem</CachePath>
+				</File>
+				<File Id="131387263" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LWD Chase music start.wav</ShortName>
+					<CachePath>SFX/LWD Chase music start_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="208349530" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Submarine Creaking Sound Effect.wav</ShortName>
@@ -195,6 +215,10 @@
 					<ShortName>Submarine Creaking Sound Effect.wav</ShortName>
 					<CachePath>SFX/Submarine Creaking Sound Effect_BC5B6844.wem</CachePath>
 				</File>
+				<File Id="397425899" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LWD - Backdrop.wav</ShortName>
+					<CachePath>SFX/LWD - Backdrop_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="594164152" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LWD Waaap.wav</ShortName>
 					<CachePath>SFX/LWD Waaap_10C4C929.wem</CachePath>
@@ -207,21 +231,83 @@
 					<ShortName>underwater-ambience-6201.wav</ShortName>
 					<CachePath>SFX/underwater-ambience-6201_7C29CD87.wem</CachePath>
 				</File>
+				<File Id="938303420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>endingelevator-152337.wav</ShortName>
+					<CachePath>SFX/endingelevator-152337_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="952724464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LWD Chase music main.wav</ShortName>
+					<CachePath>SFX/LWD Chase music main_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="978712793" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>designed-fire-winds-swoosh-04-116788.wav</ShortName>
 					<CachePath>SFX/designed-fire-winds-swoosh-04-116788_DD3EBE07.wem</CachePath>
 				</File>
 				<File Id="1022142027" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sonar-ping-95840.wav</ShortName>
-					<CachePath>SFX/sonar-ping-95840_8DE10FD1.wem</CachePath>
+					<CachePath>SFX/sonar-ping-95840_7F92FB78.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="191430384" Name="PA_Announcement1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="86245554" Name="Attack_Remover" LibName="Wwise Compressor" LibId="7077891"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1139110184" Name="Play_FlareIgnite" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="354413542"/>
 						<MediaRef Id="978712793"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="3907496076" Name="Play_MainGameMusic" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="440928865" Id="2519568939"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3239871325" Id="0"/>
+									<MediaRefs>
+										<MediaRef Id="938303420"/>
+									</MediaRefs>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="191430384"/>
+										</Custom>
+										<ShareSets>
+											<PluginRef Id="86245554"/>
+										</ShareSets>
+									</PluginRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="440928865" Id="440928865"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3239871325" Id="216219666"/>
+									<MediaRefs>
+										<MediaRef Id="131387263"/>
+										<MediaRef Id="952724464"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="440928865" Id="440928865"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3239871325" Id="938058686"/>
+									<MediaRefs>
+										<MediaRef Id="397425899"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="3738780720" Name="Play_MainMenu" DurationType="Infinite">
 					<MediaRefs>
@@ -253,9 +339,24 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2191334314" Name="Stop_FlareIgnite" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1520859230" Name="Stop_MainGameMusic" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="890527358" Name="Stop_MainMenu" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="440928865" Name="InWater">
+					<States>
+						<State Id="440928865" Name="InWater"/>
+						<State Id="2519568939" Name="InBase"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3239871325" Name="BeingAttacked">
+					<States>
+						<State Id="216219666" Name="Attacked"/>
+						<State Id="938058686" Name="Safe"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3E891E6A-CB59-8ED4-C589-85B443276C16}</FileHash>
+	<FileHash>{5D326832-98D9-6334-E4BA-19B2E51C3FA0}</FileHash>
 </SoundBanksInfo>

@@ -1,13 +1,23 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1445037870	MusicSwitch			\Default Work Unit\MusicSwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	670611050	Neutral	MusicSwitch			
+	1753303624	BeingChased	MusicSwitch			
+	2519568939	InBase	MusicSwitch			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	440928865	InWater			\Default Work Unit\InWater	
+	3239871325	BeingAttacked			\Default Work Unit\BeingAttacked	
 
 State	ID	Name	State Group			Notes
 	440928865	InWater	InWater			
-	748895195	None	InWater			
-	1182647281	OutOfWater	InWater			
+	2519568939	InBase	InWater			
+	216219666	Attacked	BeingAttacked			
+	938058686	Safe	BeingAttacked			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	722319580	OutOfWater	InWater	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+	722319580	InBase	InWater	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	

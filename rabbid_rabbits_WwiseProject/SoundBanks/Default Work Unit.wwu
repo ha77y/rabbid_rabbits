@@ -8,6 +8,8 @@
 						<ObjectRef Name="Play_MainMenu" ID="{7AD152C8-83CE-4071-A4DC-0DE958FF5E80}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sonar_ping_95840" ID="{5D611C65-5D4F-41DD-B597-57D7DB9FA04C}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_RandomInside" ID="{C833ECC3-6DCB-451E-975F-82805F92D678}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MainGameMusic" ID="{69D24203-8AFD-4689-A8CD-69C1A5359BD0}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_MainGameMusic" ID="{0B5EC1B0-EF9D-4B3B-A9B6-09718DBFC4B4}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_RandomOutside" ID="{82622D7D-39E1-4B4A-A43F-E7C2BD1CFC09}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayRandomThingie" ID="{099119DB-B20D-4BF1-BA11-5C7BBE35C266}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_MainMenu" ID="{9A4EF745-9532-4E89-9A03-7BD3E7282938}" WorkUnitID="{FEB6DEE8-E3D8-4E12-BF92-9C23D468CCFD}" Origin="Manual" Filter="7"/>

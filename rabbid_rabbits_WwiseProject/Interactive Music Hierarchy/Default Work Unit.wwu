@@ -237,17 +237,6 @@
 												</Local>
 											</Reference>
 										</ObjectList>
-										<ObjectList Name="RTPC">
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{DBA12912-FB1A-4323-8E0F-F661832D535D}" ShortID="285119705">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Volume"/>
-														</PropertyList>
-													</RTPC>
-												</Local>
-											</Reference>
-										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
 							</ChildrenList>

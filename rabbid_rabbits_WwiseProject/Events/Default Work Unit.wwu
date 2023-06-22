@@ -97,6 +97,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MainGameMusic" ID="{69D24203-8AFD-4689-A8CD-69C1A5359BD0}">
+					<ChildrenList>
+						<Action Name="" ID="{51527147-8C8A-4D16-857A-6E6F531AC8FD}" ShortID="415510460">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicSwitch" ID="{BBEC1042-DACE-495B-8B2A-0807BCF2B6EC}" WorkUnitID="{647B3E36-F03A-42AE-81B1-D3D0B978DA71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_MainGameMusic" ID="{0B5EC1B0-EF9D-4B3B-A9B6-09718DBFC4B4}">
+					<ChildrenList>
+						<Action Name="" ID="{D86E5E6A-540E-4A9C-8556-822C8F8C613B}" ShortID="770171397">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicSwitch" ID="{BBEC1042-DACE-495B-8B2A-0807BCF2B6EC}" WorkUnitID="{647B3E36-F03A-42AE-81B1-D3D0B978DA71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
