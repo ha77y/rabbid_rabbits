@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using AK;
+using AK.Wwise.Editor;
 
 public class Sonar_Dot : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class Sonar_Dot : MonoBehaviour
 
 
     float span = 71.5f;
+
+
+  
+
+
     // Update is called once per frame
     void Update()
     {
