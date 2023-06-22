@@ -391,7 +391,7 @@ MonoBehaviour:
   master:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 2
+      <length>k__BackingField: 3
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -403,6 +403,15 @@ MonoBehaviour:
           value: 0
           inSlope: 0
           outSlope: 0.3582757
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5081327
+          value: 0.4292428
+          inSlope: 0.2683158
+          outSlope: 0.2683158
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -731,8 +740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   rotation:
-    m_OverrideState: 0
-    m_Value: 37
+    m_OverrideState: 1
+    m_Value: 56
   skyIntensityMode:
     m_OverrideState: 1
     m_Value: 0

@@ -13,6 +13,7 @@ public class SceneSwitch : MonoBehaviour
 
     public void SwitchScene(int value)
     {
+        
         SceneManager.LoadScene(value);
     }
 }

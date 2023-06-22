@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 161.13608, g: 187.28076, b: 195.08447, a: 1}
+  m_IndirectSpecularColor: {r: 2727.2314, g: 3329.9658, b: 3606.3164, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -967,6 +967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240772081}
   - component: {fileID: 1240772080}
+  - component: {fileID: 1240772082}
   m_Layer: 0
   m_Name: BigCode
   m_TagString: Untagged
@@ -1001,6 +1002,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240772082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240772079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39b8ba8137cb304db5f81da5be51e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1360508986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1460,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 8e5ba69cce9244842bc89df18bdc150b, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 768a186ac27f0df438118ebe955cd597, type: 2}
 --- !u!4 &1854957173
 Transform:
   m_ObjectHideFlags: 0
@@ -1474,6 +1487,7 @@ GameObject:
   - component: {fileID: 1866149488}
   - component: {fileID: 1866149487}
   - component: {fileID: 1866149486}
+  - component: {fileID: 1866149489}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -1547,6 +1561,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1866149489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866149485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9181b689c85f64999cfc46c11d2e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a0e638f1f0b228843a66f2408597e6d3, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1 &1967053654
 GameObject:
   m_ObjectHideFlags: 0
