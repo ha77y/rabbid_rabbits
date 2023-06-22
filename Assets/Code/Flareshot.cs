@@ -31,7 +31,7 @@ public class Flareshot : MonoBehaviour
                 rb = currentflare.GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * Thrust,ForceMode.Impulse);
                 player.numFlare--;
-                timer = 10; ////RESET LATER
+                timer = 30; ////RESET LATER
             }
         }
         if (timer < 0)
