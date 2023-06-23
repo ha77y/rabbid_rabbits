@@ -11,26 +11,14 @@ public class Music : MonoBehaviour
     {
         TheMonster = FindObjectOfType<Monster>();
         player = FindObjectOfType<Character>();
+        AkSoundEngine.SetState("InWater", "OutBase");
+        AkSoundEngine.SetState("BeingAttacked", "Safe");
     }
 
     private void Update()
     {
 
-        if (TheMonster.currentState == new RoamingState()|| player.movementState == new SwimState())
-        {
-            // ak.soundEngine.setSwitch("",this.object);
-            AkSoundEngine.SetSwitch("MusicSwitch","Neutral", this.gameObject);
-        }
-        if (TheMonster.currentState == new AttackingState())
-        {
-            //ak.soundEngine.setSwitch("",this.object);
-            AkSoundEngine.SetSwitch("MusicSwitch", "BeingChased", this.gameObject);
-        }
-        if (player.movementState == new WalkState())
-        {
-            //ak.soundEngine.setSwitch("",this.object);
-            AkSoundEngine.SetSwitch("MusicSwitch", "InBase", this.gameObject);
-        }
+        
         
     }
 }

@@ -120,6 +120,9 @@ public class Character : MonoBehaviour
     public Vector3 lookDirection;
 
     public GameObject cursor;
+
+    public bool inside =false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -324,6 +327,7 @@ public class Character : MonoBehaviour
         {
             health -= 5;
             iFrame = 0.2f;
+            
         }
     }
 

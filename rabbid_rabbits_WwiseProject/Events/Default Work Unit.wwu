@@ -122,6 +122,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_deep_sea_ambience_6933" ID="{E1045669-E1C2-4A7B-A17D-246DFA3758DA}">
+					<ChildrenList>
+						<Action Name="" ID="{5EDBC189-FEFB-44F5-8D36-55E9B0F06CAC}" ShortID="1024952143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="deep-sea-ambience-6933" ID="{A28ED5F2-4682-4424-9AC8-7B21DB17C2DC}" WorkUnitID="{D735C154-1DF1-430E-A377-8804F7328A89}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

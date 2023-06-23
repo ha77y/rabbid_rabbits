@@ -11,9 +11,11 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3239871325	BeingAttacked			\Default Work Unit\BeingAttacked	
 
 State	ID	Name	State Group			Notes
-	440928865	InWater	InWater			
+	748895195	None	InWater			
+	1133774580	OutBase	InWater			wont go back from In Base 
 	2519568939	InBase	InWater			
 	216219666	Attacked	BeingAttacked			
+	748895195	None	BeingAttacked			
 	938058686	Safe	BeingAttacked			
 
 Custom State	ID	Name	State Group	Owner		Notes

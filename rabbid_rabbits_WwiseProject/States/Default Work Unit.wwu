@@ -6,18 +6,21 @@
 				<StateGroup Name="InWater" ID="{4B8AC211-8B09-4963-93B4-1A86A97456AF}">
 					<ChildrenList>
 						<State Name="None" ID="{13EDF1B6-89FF-456A-9B81-D39FD3440BCC}"/>
-						<State Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+						<State Name="OutBase" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}">
+							<Comment>wont go back from In Base
+</Comment>
+						</State>
 						<State Name="InBase" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>
 							<StartState Name="InBase" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
-							<EndState Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+							<EndState Name="OutBase" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
 							<Time>1</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
-							<StartState Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+							<StartState Name="OutBase" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
 							<EndState Name="InBase" ID="{430BA93F-8A30-401F-99C6-1BD062176593}"/>
 							<Time>4</Time>
 							<IsShared>false</IsShared>

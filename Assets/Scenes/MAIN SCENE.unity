@@ -8383,12 +8383,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084996249}
+  - component: {fileID: 1084996250}
   - component: {fileID: 1084996248}
   - component: {fileID: 1084996247}
   - component: {fileID: 1084996246}
   - component: {fileID: 1084996245}
   - component: {fileID: 1084996244}
   - component: {fileID: 1084996243}
+  - component: {fileID: 1084996251}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -8563,6 +8565,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084996250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084996242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7038acc873595184288bfb915ad69447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheMonster: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &1084996251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084996242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57ce9acc56e51046a0bee9d979749f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 54dc7d2ad1cc4364ea07383455886a9d, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &1087197166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10868,7 +10908,7 @@ PrefabInstance:
       objectReference: {fileID: 1698189170}
     - target: {fileID: 1501313906118319157, guid: 51119fe159a6a0e4d8c0b99a9dfb52d5, type: 3}
       propertyPath: m_Duration
-      value: 76.346985
+      value: 76.955315
       objectReference: {fileID: 0}
     - target: {fileID: 1501313906118319157, guid: 51119fe159a6a0e4d8c0b99a9dfb52d5, type: 3}
       propertyPath: m_MaxSpeed

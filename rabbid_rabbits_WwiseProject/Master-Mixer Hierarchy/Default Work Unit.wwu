@@ -79,7 +79,7 @@
 								</CustomState>
 							</CustomState>
 							<CustomState>
-								<StateRef Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+								<StateRef Name="OutBase" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
 								<CustomState Name="" ID="{0911DC51-BDA8-4825-B053-BB07DCDA2F5F}" ShortID="958910021"/>
 							</CustomState>
 						</CustomStateList>

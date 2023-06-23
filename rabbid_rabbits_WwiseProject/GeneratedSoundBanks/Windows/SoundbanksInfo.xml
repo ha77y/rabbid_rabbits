@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9876B329-5CF4-A30C-8E14-10540B51C5D2}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9000CEED-2863-1DCF-3FBA-666581A7C2BF}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -47,8 +47,8 @@
 			<StateGroups>
 				<StateGroup Id="440928865" Name="InWater">
 					<States>
-						<State Id="440928865" Name="InWater"/>
 						<State Id="748895195" Name="None"/>
+						<State Id="1133774580" Name="OutBase"/>
 						<State Id="2519568939" Name="InBase"/>
 					</States>
 				</StateGroup>
@@ -185,7 +185,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0432F00F-5B42-032D-83F5-2B2AEC8227AF}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5DD99F16-E19E-D853-A3BD-3239DA79063B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -219,7 +219,7 @@
 				</File>
 				<File Id="397425899" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LWD - Backdrop.wav</ShortName>
-					<CachePath>SFX/LWD - Backdrop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/LWD - Backdrop_542CF7D5.wem</CachePath>
 				</File>
 				<File Id="594164152" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LWD Waaap.wav</ShortName>
@@ -236,6 +236,10 @@
 				<File Id="938303420" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>endingelevator-152337.wav</ShortName>
 					<CachePath>SFX/endingelevator-152337_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="952079132" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>underwater-ambience-6201.wav</ShortName>
+					<CachePath>SFX/underwater-ambience-6201_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="952724464" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LWD Chase music main.wav</ShortName>
@@ -287,7 +291,7 @@
 							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="440928865" Id="440928865"/>
+							<SwitchValue GroupType="State" GroupId="440928865" Id="1133774580"/>
 							<Children>
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="3239871325" Id="216219666"/>
@@ -299,12 +303,13 @@
 							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="440928865" Id="440928865"/>
+							<SwitchValue GroupType="State" GroupId="440928865" Id="1133774580"/>
 							<Children>
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="3239871325" Id="938058686"/>
 									<MediaRefs>
 										<MediaRef Id="397425899"/>
+										<MediaRef Id="952079132"/>
 									</MediaRefs>
 								</SwitchContainer>
 							</Children>
@@ -347,8 +352,8 @@
 			<StateGroups>
 				<StateGroup Id="440928865" Name="InWater">
 					<States>
-						<State Id="440928865" Name="InWater"/>
 						<State Id="748895195" Name="None"/>
+						<State Id="1133774580" Name="OutBase"/>
 						<State Id="2519568939" Name="InBase"/>
 					</States>
 				</StateGroup>
@@ -362,5 +367,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{42466ABB-CAA2-220A-370E-E2852DEA3770}</FileHash>
+	<FileHash>{5AD1027C-70FD-6AF1-58FD-C20836AD610E}</FileHash>
 </SoundBanksInfo>

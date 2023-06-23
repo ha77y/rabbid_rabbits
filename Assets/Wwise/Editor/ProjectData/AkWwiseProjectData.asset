@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 6ce0e0f42da1bc47953e22ffedc108e2
     GuidInternal: 
-    m_lastTime: -8585141465419843095
+    m_lastTime: -8585141150212524191
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -359,8 +359,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e8deb6fed8e3124ebf929c23d468ccfd
     GuidInternal: 
-    m_lastTime: -8585141418475763678
+    m_lastTime: -8585141168333909241
     List:
+    - name: Play_deep_sea_ambience_6933
+      guid: 695604e1c2e17b4aa17d246dfa3758da
+      id: 764366403
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e8deb6fed8e3124ebf929c23d468ccfd
+      - ElementName: Play_deep_sea_ambience_6933
+        ObjectType: 3
+        guid: 695604e1c2e17b4aa17d246dfa3758da
+      Path: Events\Default Work Unit\Play_deep_sea_ambience_6933
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_FlareIgnite
       guid: 931370d3f45ebf4fba7eb9fcc5433ab3
       id: 1139110184
@@ -738,7 +755,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 905e9703bc66234383c1738154203f84
     GuidInternal: 
-    m_lastTime: -8585141385581007573
+    m_lastTime: -8585141150212244172
     List:
     - name: BeingAttacked
       guid: 79b05775a63e014d89a2873425e6e6f0
@@ -837,22 +854,6 @@ MonoBehaviour:
         - ElementName: InBase
           ObjectType: 8
           guid: 3fa90b43308a1f4099c61bd062176593
-      - name: InWater
-        guid: 5349e8aef53fbb4292b3de9845fc91ed
-        id: 440928865
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 905e9703bc66234383c1738154203f84
-        - ElementName: InWater
-          ObjectType: 9
-          guid: 11c28a4b098b634993b41a86a97456af
-        - ElementName: InWater
-          ObjectType: 8
-          guid: 5349e8aef53fbb4292b3de9845fc91ed
       - name: None
         guid: b6f1ed13ff896a459b81d39fd3440bcc
         id: 748895195
@@ -869,6 +870,22 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: b6f1ed13ff896a459b81d39fd3440bcc
+      - name: OutBase
+        guid: 5349e8aef53fbb4292b3de9845fc91ed
+        id: 1133774580
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 905e9703bc66234383c1738154203f84
+        - ElementName: InWater
+          ObjectType: 9
+          guid: 11c28a4b098b634993b41a86a97456af
+        - ElementName: OutBase
+          ObjectType: 8
+          guid: 5349e8aef53fbb4292b3de9845fc91ed
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -981,8 +998,8 @@ MonoBehaviour:
         guid: b32c882770db9346a57f56be8dacc9ca
       Path: Triggers\Default Work Unit\New_Trigger
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0e0000000f00000010000000
+  ExpandedWaapiItemIds: 1500000016000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 

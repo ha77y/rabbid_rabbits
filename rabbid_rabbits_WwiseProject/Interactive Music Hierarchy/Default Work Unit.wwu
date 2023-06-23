@@ -136,6 +136,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<MusicPlaylistContainer Name="Safe" ID="{CE010AF9-B966-436E-9D5E-33A91DAA3B6A}" ShortID="3975321">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9B11FFD9-76D1-4CF8-9E58-5605AAC4C157}"/>
@@ -147,7 +154,7 @@
 							<ChildrenList>
 								<MusicSegment Name="LWD - Backdrop" ID="{0DBBDC2F-C70B-4E99-A254-D1E050C2787F}" ShortID="707050555">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="16000"/>
+										<Property Name="EndPosition" Type="Real64" Value="46920"/>
 										<Property Name="PlaybackSpeed" Type="Real64">
 											<ValueList>
 												<Value>0.8</Value>
@@ -176,6 +183,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="LWD - Backdrop" ID="{0DA90F39-D59A-4D1E-97A1-741A1481C4F0}">
+													<PropertyList>
+														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>LWD - Backdrop.wav</AudioFile>
 													<MediaIDList>
@@ -207,6 +217,122 @@
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="LWD - Backdrop" ID="{0DA90F39-D59A-4D1E-97A1-741A1481C4F0}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="New Music Track" ID="{B4CBF6C2-47FB-4447-BF23-5D2B6985D423}" ShortID="544140779">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F4E0E06C-A12D-47BC-953E-22FFEDC108E2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="underwater-ambience-6201" ID="{F647891B-646C-4F47-9691-C1032802D110}">
+													<Language>SFX</Language>
+													<AudioFile>underwater-ambience-6201.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="952079132"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{87D2F45E-A08F-45DB-857C-95D6415D18D3}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{6B1141E4-06BD-4DD9-9783-924019C2DC9B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="underwater-ambience-6201" ID="{C5A328CA-0B05-4E97-B89F-4BC4598FBDFD}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16039.0184049079"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="490.797546012265"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="underwater-ambience-6201" ID="{F647891B-646C-4F47-9691-C1032802D110}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{A5668E00-6046-4179-90DA-A1F7621761A2}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>16.03902</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{896AC976-8383-4364-A625-9BC96335D127}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>16.03902</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{E0766489-89EB-4C3B-8C5E-87477BFDB6F4}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>16.03902</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -481,6 +607,8 @@
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="InBase" ID="{CCFF9862-0113-46CF-B93E-B61C2E68A333}" ShortID="993401853">
 							<PropertyList>
+								<Property Name="GridOffsetCustom" Type="Real64" Value="4000"/>
+								<Property Name="GridOffsetPreset" Type="int16" Value="1"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>48</Value>
@@ -645,8 +773,11 @@
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{BAF24C7D-43AD-4EF0-957B-B625F2DAB679}">
 									<PropertyList>
+										<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+										<Property Name="DestinationPlaylistJumpTo" Type="int16" Value="3"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 									</PropertyList>
 									<TransitionInfo>
 										<SourceFadeOut>
@@ -658,6 +789,13 @@
 												</PropertyList>
 											</MusicFade>
 										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{C9C8384C-E0FC-4FDA-9272-1E73548845D2}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="1.6"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
 									</TransitionInfo>
 								</MusicTransition>
 							</ChildrenList>
@@ -680,7 +818,7 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+								<PathElementRef Name="OutBase" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
 								<PathElementRef Name="Attacked" ID="{73FAA818-7BB9-48DF-8666-FE46C15910CE}"/>
 							</Path>
 							<AudioNodeInfo>
@@ -689,7 +827,7 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="InWater" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
+								<PathElementRef Name="OutBase" ID="{AEE84953-3FF5-42BB-92B3-DE9845FC91ED}"/>
 								<PathElementRef Name="Safe" ID="{B1414A53-A8B9-4720-8D27-029A8BE40D43}"/>
 							</Path>
 							<AudioNodeInfo>

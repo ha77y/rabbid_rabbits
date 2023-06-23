@@ -15,9 +15,11 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3239871325	BeingAttacked			\Default Work Unit\BeingAttacked	
 
 State	ID	Name	State Group			Notes
-	440928865	InWater	InWater			
+	748895195	None	InWater			
+	1133774580	OutBase	InWater			wont go back from In Base 
 	2519568939	InBase	InWater			
 	216219666	Attacked	BeingAttacked			
+	748895195	None	BeingAttacked			
 	938058686	Safe	BeingAttacked			
 
 Effect plug-ins	ID	Name	Type				Notes
@@ -32,11 +34,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	328404054	underwater-ambience-6201	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_F51946C9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingieMenu\underwater-ambience-6201		258012
 	354413542	designed-fire-winds-swoosh-04-116788_02	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\designed-fire-winds-swoosh-04-116788_EB3D09EC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Flare\FlareIgnite\afterburn\designed-fire-winds-swoosh-04-116788_02		332448
 	378614413	Submarine Creaking Sound Effect	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\Submarine Creaking Sound Effect_BC5B6844.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomInside\Submarine Creaking Sound Effect		423924
-	397425899	LWD - Backdrop	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\LWD - Backdrop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusicSwitch\Safe\LWD - Backdrop\LWD - Backdrop		2822496
+	397425899	LWD - Backdrop	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\LWD - Backdrop_542CF7D5.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusicSwitch\Safe\LWD - Backdrop\LWD - Backdrop		2822496
 	594164152	LWD Waaap	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\LWD Waaap_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomOutside\LWD Waaap		1058496
 	728202173	LWD Menu theme	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\LWD Menu theme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MainMenu\LWD Menu theme\LWD Menu theme		2822496
 	837911073	underwater-ambience-6201_01	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_7C29CD87.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomThingieMenu\underwater-ambience-6201_01		316360
 	938303420	endingelevator-152337	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\endingelevator-152337_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusicSwitch\InBase\endingelevator-152337\endingelevator-152337		4921440
+	952079132	New Music Track	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\underwater-ambience-6201_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusicSwitch\Safe\LWD - Backdrop\New Music Track		4504416
 	952724464	LWD Chase music main	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\LWD Chase music main_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusicSwitch\Persuit\LWD Chase music main\LWD Chase music main		1411296
 	978712793	designed-fire-winds-swoosh-04-116788	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\designed-fire-winds-swoosh-04-116788_DD3EBE07.wem		\Actor-Mixer Hierarchy\Default Work Unit\Flare\FlareIgnite\designed-fire-winds-swoosh-04-116788		1350264
 	1022142027	sonar-ping-95840	C:\Users\harri\OneDrive\Documents\GitHub\rabbid_rabbits\rabbid_rabbits_WwiseProject\.cache\Windows\SFX\sonar-ping-95840_7F92FB78.wem		\Actor-Mixer Hierarchy\Default Work Unit\sonar-ping-95840		148920

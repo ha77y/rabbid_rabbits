@@ -45,7 +45,12 @@ public class RoamingState : ActiveState
             monster.currentState = new AttackingState();
             monster.cooldown = 5f;
         }
-        
+
+        if (monster.Attacking)
+        {
+            AkSoundEngine.SetState("BeingAttacked", "Safe");
+            monster.Attacking = false;
+        }
  
     }
     public override void initialize(Monster monster)
@@ -81,6 +86,11 @@ public class AttackingState : ActiveState
         {        
             monster.currentState = new RetreatingState();
             //change to retreating
+        }
+        if (!monster.Attacking)
+        {
+            AkSoundEngine.SetState("BeingAttacked", "Attacked");
+            monster.Attacking = true;
         }
 
     }
@@ -180,6 +190,8 @@ public class Monster : MonoBehaviour
     public ActiveState currentState = new RoamingState();
 
     public GameObject damagePlayer;
+
+    public bool Attacking;
 
     void Start()
     {

@@ -15,7 +15,19 @@ public class Door : InteractableObject
                 Debug.Log("SwitchMovement");
                 //player.movementState.switchMovement(player);
 
-           
+                if (player.inside) 
+                {
+                    AkSoundEngine.SetState("InWater", "OutBase");
+                    player.inside = false;
+                    print(player.inside);
+                }
+                else if (!player.inside)
+                {
+                    AkSoundEngine.SetState("InWater", "InBase");
+                    player.inside = true;
+                    print(player.inside);
+                }
+
                 player.doorMove(this);
             }
             else
@@ -25,6 +37,7 @@ public class Door : InteractableObject
         }
         else
         {
+            
             Debug.Log("SwitchMovement");
             //player.movementState.switchMovement(player);
             player.doorMove(this);
