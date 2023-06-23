@@ -19,6 +19,8 @@ public class Sonar : MonoBehaviour
     public RaycastHit[] Hits;
     public Vector3 boxSize;
 
+    public LayerMask TargetLayer;
+
     List<Transform> recognised = new List<Transform>();
     List<GameObject> dots = new List<GameObject>();
     List<Transform> currentHits = new List<Transform>(); 
@@ -47,7 +49,7 @@ public class Sonar : MonoBehaviour
         transform.position = player.transform.position;
         transform.Rotate(0, -sonarSpeed, 0);
 
-        Hits = Physics.BoxCastAll(player.transform.position, boxSize, transform.forward, transform.rotation, sonarRadius);
+        Hits = Physics.BoxCastAll(player.transform.position, boxSize, transform.forward, transform.rotation, sonarRadius, TargetLayer);
 
 
         currentHits.Clear();

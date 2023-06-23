@@ -441,9 +441,9 @@ GameObject:
   - component: {fileID: 1501313906118319157}
   - component: {fileID: 1501313906118319163}
   - component: {fileID: 1501313906118319162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Sonar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 1501313906660591394}
   - component: {fileID: 1501313906660591395}
   - component: {fileID: 1501313906660591420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Sonar
   m_Icon: {fileID: 0}
