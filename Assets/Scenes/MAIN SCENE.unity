@@ -1905,6 +1905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank new
       objectReference: {fileID: 0}
+    - target: {fileID: 6941994296874697485, guid: cb22009df1045e84795a732a3dad57dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8369,7 +8373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57ce9acc56e51046a0bee9d979749f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
+  triggerList: ae8d9d44
   useOtherObject: 0
   data:
     idInternal: 0
