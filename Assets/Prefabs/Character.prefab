@@ -735,7 +735,7 @@ MonoBehaviour:
   samples: 0
   maxSamples: 4
   hasKeycard: 0
-  moveSpeed: 4
+  moveSpeed: 5
   cameraSens: 2
   walkCollider: {fileID: 0}
   numFlare: 2
@@ -746,6 +746,8 @@ MonoBehaviour:
   iFrame: 0
   lookDirection: {x: 0, y: 0, z: 0}
   cursor: {fileID: 1132952105}
+  sceneSwitcher: {fileID: 0}
+  inside: 0
 --- !u!114 &3996572884694005381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,7 +773,7 @@ Rigidbody:
   m_GameObject: {fileID: 8088046402447179370}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 3
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}

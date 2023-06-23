@@ -502,7 +502,7 @@ MonoBehaviour:
   reoriented: 0
   flare: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: 2
+  moveSpeed: 3
   aggroRange: 20
   cooldown: 0
   monsterPath: {fileID: 1501313906510198157}
