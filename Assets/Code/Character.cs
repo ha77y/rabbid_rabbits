@@ -191,8 +191,19 @@ public class Character : MonoBehaviour
     private void interactionCheck()
     {
 
-        float interactDistance = 3f;
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactDistance))
+        float interactDistance = 5f;
+
+
+        Vector3 forwardDir;
+        if(movementState is WalkState)
+        {
+            forwardDir = this.GetComponentInChildren<Camera>().transform.forward;
+        }
+        else
+        {
+            forwardDir = transform.forward;
+        }
+        if (Physics.Raycast(transform.position, forwardDir, out RaycastHit raycastHit, interactDistance))
         {
             //Debug.Log(raycastHit);
 
@@ -295,7 +306,7 @@ public class Character : MonoBehaviour
         }
         player.transform.position = targetPosition;
 
-
+        transform.GetComponentInChildren<Camera>().transform.rotation = player.transform.rotation; 
         // should prolly put this in the animstate for consistency
         if (enter)
         {
@@ -319,11 +330,12 @@ public class Character : MonoBehaviour
 
     public void win()
     {
-
+        Debug.Log("Win");
+        //Application.Quit();
     }
     public void lose()
     {
-
+        //Application.Quit();
     }
 
     public void knife()
