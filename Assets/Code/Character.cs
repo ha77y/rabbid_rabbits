@@ -121,13 +121,22 @@ public class Character : MonoBehaviour
 
     public GameObject cursor;
 
+    public GameObject sceneSwitcher;
+
+
     public bool inside =false;
 
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    private void Awake()
+    {
+        sceneSwitcher = GameObject.Find("BigCode2");
         movementState = new SwimState();
-        movementState.initialize(this);
+        movementState.initialize(this);       
     }
 
     // Update is called once per frame
@@ -194,7 +203,7 @@ public class Character : MonoBehaviour
     private void interactionCheck()
     {
 
-        float interactDistance = 5f;
+        float interactDistance = 3f;
 
 
         Vector3 forwardDir;
@@ -334,11 +343,15 @@ public class Character : MonoBehaviour
 
     public void win()
     {
-        Debug.Log("Win");
+        //Debug.Log("Win");
+
+        sceneSwitcher.GetComponent<SceneSwitch>().SwitchScene(0);
+
         //Application.Quit();
     }
     public void lose()
     {
+        sceneSwitcher.GetComponent<SceneSwitch>().SwitchScene(0);
         //Application.Quit();
     }
 

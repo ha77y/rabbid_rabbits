@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    
+
+
+
     public void Quit() 
     {
         Application.Quit();
@@ -13,7 +15,12 @@ public class SceneSwitch : MonoBehaviour
 
     public void SwitchScene(int value)
     {
-        
+
         SceneManager.LoadScene(value);
+    }
+
+
+    public void Awake()
+    {
     }
 }
